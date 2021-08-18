@@ -1,3 +1,5 @@
 *.mp4
 *.vtt
 Icon
+.ipynb_checkpoints
+.DS_Store
