@@ -21,11 +21,14 @@ for filename in sub_files:
         for line in file:
             if ' --> ' in line:
                 start, end = str_to_secs(line.split(' --> ')[0]), str_to_secs(line.split(' --> ')[1][:-1])
-            elif start is not None:
+            elif start is not None and end is not None:
                 if line != '\n':
-                    sub = line if not sub else sub[:-1] + ' ' + line
+                    if sub is not None:
+                        sub = sub[:-1] + ' ' + line
+                    else:
+                        sub = line
                 else:
-                    if sub[:-1] != "[Música]":
+                    if sub is not None and sub[:-1] != "[Música]":
                         subs_dict[name].append((start, end, sub[:-1].replace('- ', '').lower()))
                     start = end = sub = None
 
