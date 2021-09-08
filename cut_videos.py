@@ -9,15 +9,16 @@ with open("data/subs_dict.json", 'r', encoding='utf-8') as subs_dict_file:
   subs_dict: dict[str, list[tuple[float, float, str]]] = json.load(subs_dict_file)
 
 # Se descarta un video con los subtitulos descoordinados
-items = [(n,s) for (n,s) in subs_dict.items() if n != 'Noticias en Lengua de Señas Argentina (resumen semanal 06_12_2020)-d7akwvWNPrU']
+excluded = ['Noticias en Lengua de Señas Argentina (resumen semanal 06_12_2020)-d7akwvWNPrU']
 
-for name, subs in items:
-    dir = "data/cuts/{}/".format(name)
-    if not os.path.isdir(dir):
-        os.mkdir(dir)
-    with VideoFileClip("raw/{}.mp4".format(name)) as video:
-        for i, (start, end, sub) in enumerate(subs):
-            if not os.path.isfile((dir + str(i) + ".mp4")):
-                new = video.subclip(start, end)
-                new.write_videofile((dir + str(i) + ".mp4"), audio=False)
-        #ffmpeg_extract_subclip("raw/{}.mp4".format(name), start, end, targetname=(dir + str(i) + ".mp4"))
+for name, subs in subs_dict.items():
+    if name not in excluded:
+        dir = "data/cuts/{}/".format(name)
+        if not os.path.isdir(dir):
+            os.mkdir(dir)
+        with VideoFileClip("raw/{}.mp4".format(name)) as video:
+            for i, (start, end, sub) in enumerate(subs):
+                if not os.path.isfile((dir + str(i) + ".mp4")):
+                    new = video.subclip(start, end)
+                    new.write_videofile((dir + str(i) + ".mp4"), audio=False)
+            #ffmpeg_extract_subclip("raw/{}.mp4".format(name), start, end, targetname=(dir + str(i) + ".mp4"))
