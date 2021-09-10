@@ -23,7 +23,7 @@ for name, subs in subs_dict.items():
                     new = video.subclip(start, end)
                     new.write_videofile((dir + str(i) + ".mp4"), audio=False)
             #ffmpeg_extract_subclip("raw/{}.mp4".format(name), start, end, targetname=(dir + str(i) + ".mp4"))
-    if len(sys.argv) > 1 and sys[2] = "-d":
+    if len(sys.argv) > 1 and sys.argv[1] == "-d":
         os.remove("raw/{}.mp4".format(name))
         os.remove("raw/{}.es-419.vtt".format(name))
 
