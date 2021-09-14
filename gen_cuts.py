@@ -39,7 +39,7 @@ if not os.path.isdir('data/cuts'):
 
 for filename in sub_files:
     name = filename[:-11]
-    outdir = "data/c/{}/".format(name)
+    outdir = "data/cuts/{}/".format(name)
     if not os.path.isdir(outdir):
         os.mkdir(outdir)
     with open(input + filename, 'r', encoding='utf-8') as subs_file:
