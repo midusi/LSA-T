@@ -32,6 +32,11 @@ def process_sub_file(file: TextIO) -> SubsList:
                 start = end = sub = None
     return subs
 
+if not os.path.isdir('data'):
+    os.mkdir('data')
+if not os.path.isdir('data/cuts'):
+    os.mkdir('data/cuts')
+
 for filename in sub_files:
     name = filename[:-11]
     outdir = "data/c/{}/".format(name)
