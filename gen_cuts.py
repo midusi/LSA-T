@@ -32,12 +32,9 @@ def process_sub_file(file: TextIO) -> SubsList:
                 start = end = sub = None
     return subs
 
-# subs_dict contains a dictionary with the form {videoTitle: [(start, end, line)]} where start and end are the time in seconds of line
-subs_dict: dict[str, list[tuple[float, float, str]]] = {}
-
 for filename in sub_files:
     name = filename[:-11]
-    outdir = "data/cuts/{}/".format(name)
+    outdir = "data/c/{}/".format(name)
     if not os.path.isdir(outdir):
         os.mkdir(outdir)
     with open(input + filename, 'r', encoding='utf-8') as subs_file:
@@ -47,16 +44,13 @@ for filename in sub_files:
             if not os.path.isfile((outdir + str(i) + ".mp4")):
                 newvid = video.subclip(start, end)
                 newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
-                with open(outdir + str(i) + ".json", 'w') as data_file:
+                with open(outdir + str(i) + ".json", 'w', encoding='utf-8') as data_file:
                     json.dump({
                         'label': sub,
                         'start': start,
                         'end': end,
-                        'video': filename
+                        'video': name
                     }, data_file)
     if len(sys.argv) > 1 and sys.argv[1] == "-d":
         os.remove("raw/{}.mp4".format(name))
         os.remove("raw/{}.es-419.vtt".format(name))
-
-with open("data/subs_dict.json", 'w', encoding='utf-8') as subs_dict_file:
-    json.dump(subs_dict, subs_dict_file)
