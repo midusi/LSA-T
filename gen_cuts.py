@@ -46,7 +46,7 @@ for filename in sub_files:
         subs = process_sub_file(subs_file)
     with VideoFileClip("raw/{}.mp4".format(name)) as video:
         for i, (start, end, sub) in enumerate(subs):
-            if not os.path.isfile((outdir + str(i) + ".mp4")):
+            if not os.path.isfile((outdir + str(i) + ".json")):
                 newvid = video.subclip(start, end)
                 newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
                 with open(outdir + str(i) + ".json", 'w', encoding='utf-8') as data_file:
