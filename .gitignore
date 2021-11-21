@@ -3,6 +3,6 @@
 Icon
 .ipynb_checkpoints
 .DS_Store
-data/
-raw/downloaded.txt
-
+data
+raw
+.debris
