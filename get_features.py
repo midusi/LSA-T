@@ -43,74 +43,88 @@ def format_box(box: list[float]) -> Box:
     }
 
 # Identify signer
-for f in os.listdir("res"):
+for cut in os.listdir("data/cuts"):
+    for f in os.listdir("data/cuts/" + cut):
+        path = "data/cuts/" + cut + '/' + f
+        print(path)
+        if not os.path.isdir(path):
+            continue
 
-    if f.startswith('.'):
-        continue
+        with open(path + "/alphapose-results.json") as ap_file:
+            ap: list[KeypointData] = json.load(ap_file)
 
-    with open("res/" + f + "/alphapose-results.json") as res_file:
-        res = json.load(res_file)
+        # seqs contains a list of lists of keypoints data, one for each signer
+        seqs: list[list[KeypointData]] = []
 
-    # seqs contains a list of lists of keypoints data, one for each signer
-    seqs: list[list[KeypointData]] = []
+        '''
+        first_boxes = list(map(lambda kd: format_box(kd["box"]), (takewhile(lambda kd: kd["image_id"] == "0.jpg", ap))))
+        for b in first_boxes:
+            seqs.append([])
 
-    first_boxes = list(map(lambda kd: format_box(kd["box"]), (takewhile(lambda kd: kd["image_id"] == "0.jpg", res))))
-    for b in first_boxes:
-        seqs.append([])
+        grouped_kds: list[tuple[KeypointData, ...]] = list(grouped(ap, len(first_boxes)))
+        for kds in grouped_kds:
+            for kd in kds:
+                seqs[closest_box(first_boxes, format_box(kd["box"]))].append(kd)
+        print(len(first_boxes), len(grouped_kds))
+        '''
 
-    grouped_kds: list[tuple[KeypointData, ...]] = list(grouped(res, len(first_boxes)))
-    for kds in grouped_kds:
-        for kd in kds:
-            seqs[closest_box(first_boxes, format_box(kd["box"]))].append(kd)
+        kds = []
+        for kd in ap:
+            if len(kds) == 0 or any(map(lambda prev_k: kd['image_id'] == prev_k['image_id'], kds[-1])):
+                kds.append([])
 
+        keypoints: list[dict[str,list[list]]] = []
+        for s in seqs:
+            keypoints.append({
+                'x': [[] for _ in range(136)],
+                'y': [[] for _ in range(136)],
+                'c': [[] for _ in range(136)]
+            })
+            for keydata in s:
+                for idx, keypoint in enumerate(keydata["keypoints"]):
+                    if idx % 3 == 0:
+                        keypoints[-1]['x'][int(idx/3)].append(keypoint)
+                    if idx % 3 == 1:
+                        keypoints[-1]['y'][int(idx/3)].append(keypoint)
+                    if idx % 3 == 2:
+                        keypoints[-1]['c'][int(idx/3)].append(keypoint)
 
-    keypoints: list[dict[str,list[list]]] = []
-    for s in seqs:
-        keypoints.append({
-            'x': [[] for _ in range(136)],
-            'y': [[] for _ in range(136)],
-            'c': [[] for _ in range(136)]
-        })
-        for keydata in s:
-            for idx, keypoint in enumerate(keydata["keypoints"]):
-                if idx % 3 == 0:
-                    keypoints[-1]['x'][int(idx/3)].append(keypoint)
-                if idx % 3 == 1:
-                    keypoints[-1]['y'][int(idx/3)].append(keypoint)
-                if idx % 3 == 2:
-                    keypoints[-1]['c'][int(idx/3)].append(keypoint)
+        # print(len(seqs), len(seqs[1]), len(seqs[0][0]["keypoints"]))
+        # print(len(keypoints), len(keypoints[0]['x']), len(keypoints[0]['x'][0]))
 
-    # print(len(seqs), len(seqs[1]), len(seqs[0][0]["keypoints"]))
-    # print(len(keypoints), len(keypoints[0]['x']), len(keypoints[0]['x'][0]))
+        max_idx, max_total = 0, None
+        for idx, each in enumerate(keypoints):
+            distance_x = np.array(list(map(lambda keys: max(keys) - min(keys), each['x'])))
+            distance_y = np.array(list(map(lambda keys: max(keys) - min(keys), each['y'])))
+            distance = np.sqrt(distance_x**2 + distance_y**2)
+            confidence = np.array(list(map(mean, each['c'])))
+            total = np.sum(np.multiply(distance, confidence))
+            #total = np.sum(distance)
+            if max_total is None or max_total < total:
+                max_idx = idx
+                max_total = total
 
-    max_idx, max_total = 0, None
-    for idx, each in enumerate(keypoints):
-        distance_x = np.array(list(map(lambda keys: max(keys) - min(keys), each['x'])))
-        distance_y = np.array(list(map(lambda keys: max(keys) - min(keys), each['y'])))
-        distance = np.sqrt(distance_x**2 + distance_y**2)
-        confidence = np.array(list(map(mean, each['c'])))
-        total = np.sum(np.multiply(distance, confidence))
-        #total = np.sum(distance)
-        if max_total is None or max_total < total:
-            max_idx = idx
-            max_total = total
+        signer = seqs[max_idx]
 
-    signer = seqs[max_idx]
+        # Crop video
+        x1s: list[float] = []
+        y1s: list[float] = []
+        widths: list[float] = []
+        heights: list[float] = []
 
-    # Crop video
-    x1s = []
-    y1s = []
-    widths = []
-    heights = []
+        for keydata in signer:
+            x1s.append(keydata['box'][0])
+            y1s.append(keydata['box'][1])
+            widths.append(keydata['box'][2])
+            heights.append(keydata['box'][3])
 
-    for keydata in signer:
-        x1s.append(keydata['box'][0])
-        y1s.append(keydata['box'][1])
-        widths.append(keydata['box'][2])
-        heights.append(keydata['box'][3])
+        with open(path + ".json") as res_file:
+            res = json.load(res_file)
+            res["keypoints"] = signer
+            res["roi"] = format_box([min(x1s), min(y1s), max(widths), max(heights)])
 
-    x1, y1, = mean(x1s), mean(y1s)
-    width, height = mean(widths), mean(heights)
+        with open(path + "x.json", 'w') as res_file:
+            json.dump(res, res_file)
 
-    with open("res/" + f + "/box.txt", 'w') as box_f:
-        box_f.write('\n'.join(map(str, [x1,y1,width,height])) + '\n')
+        break
+    break

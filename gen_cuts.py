@@ -3,19 +3,20 @@ import os, sys, json
 from moviepy.video.io.VideoFileClip import VideoFileClip
 
 
+Subt = tuple[float, float, str]
+
 input = 'raw/'
 # Se descarta un video con los subtitulos descoordinados
-excluded = ['Noticias en Lengua de Señas Argentina (resumen semanal 06_12_2020)-d7akwvWNPrU.es-419.vtt']
+excluded = ['noticias-en-lengua-de-senas-argentina-resumen-semanal-06122020.vtt']
 sub_files = [f for f in os.listdir(input) if f.endswith('.vtt') if f not in excluded]
 
 def str_to_secs(time: str) -> float:
     'Amount of seconds for string in xx:xx:xx format'
-    hours, mins, secs = time.split(':')
+    hours, mins, secs = time.replace(',','.').split(':')
     return float(hours)*3600 + float(mins)*60 + float(secs)
 
-SubsList = list[tuple[float, float, str]]
-def process_sub_file(file: TextIO) -> SubsList:
-    subs: SubsList = []
+def process_sub_file(file: TextIO) -> list[Subt]:
+    subs: list[Subt] = []
     start = end = sub = None
     for line in file:
         if ' --> ' in line:
@@ -37,8 +38,8 @@ if not os.path.isdir('data'):
 if not os.path.isdir('data/cuts'):
     os.mkdir('data/cuts')
 
-for filename in sub_files:
-    name = filename[:-11]
+for vid_idx, filename in enumerate(sub_files):
+    name = filename[:-4]
     outdir = "data/cuts/{}/".format(name)
     if not os.path.isdir(outdir):
         os.mkdir(outdir)
@@ -46,6 +47,7 @@ for filename in sub_files:
         subs = process_sub_file(subs_file)
     with VideoFileClip("raw/{}.mp4".format(name)) as video:
         for i, (start, end, sub) in enumerate(subs):
+            print("Video {}/{} - Clip {}/{}".format(vid_idx, len(sub_files), i, len(subs)))
             if not os.path.isfile((outdir + str(i) + ".json")):
                 newvid = video.subclip(start, end)
                 newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
@@ -58,4 +60,4 @@ for filename in sub_files:
                     }, data_file)
     if len(sys.argv) > 1 and sys.argv[1] == "-d":
         os.remove("raw/{}.mp4".format(name))
-        os.remove("raw/{}.es-419.vtt".format(name))
+        os.remove("raw/{}.vtt".format(name))
