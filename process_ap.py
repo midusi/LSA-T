@@ -49,9 +49,9 @@ def get_box(signer: list[KeypointData]) -> Box:
 # Identify signers
 #for cut in os.listdir("data/cuts"):
 #    for f in os.listdir("data/cuts/" + cut):
-for f in [d for d in os.listdir("test") if os.path.isdir("test/" + d)]:
+for f in [d for d in os.listdir("data/test") if os.path.isfile("data/test/" + d + "/alphapose-results.json")]:
     #path = "data/cuts/" + cut + '/' + f
-    path = "test/" + f
+    path = "data/test/" + f
     print(path)
 
     with open(path + "/alphapose-results.json") as ap_file:
@@ -98,5 +98,5 @@ for f in [d for d in os.listdir("test") if os.path.isdir("test/" + d)]:
         json.dump(res, res_file)
         res_file.truncate()
         
-    os.remove(path + "/alphapose-results.json")
-    os.rmdir(path)
+    #os.remove(path + "/alphapose-results.json")
+    #os.rmdir(path)
