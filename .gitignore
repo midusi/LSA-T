@@ -1,9 +1,10 @@
-*.mp4
-*.vtt
 Icon
 .ipynb_checkpoints
 .DS_Store
-data
-raw
 .debris
 AlphaPose
+*.mp4
+*.vtt
+data
+raw
+test
