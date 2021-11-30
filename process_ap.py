@@ -58,7 +58,8 @@ for idx, f in enumerate(tests):
 
     with open(path + "/alphapose-results.json") as ap_file:
         # signers contains a list of lists of keypoints data, one for each signer
-        signers: list[list[KeypointData]] = group_kds(json.load(ap_file))
+        ap = json.load(ap_file)
+        signers: list[list[KeypointData]] = group_kds(ap)
 
     keypoints_for_signers: list[dict[str,list[list]]] = []
     for s in signers:
@@ -97,5 +98,7 @@ for idx, f in enumerate(tests):
         json.dump(res, res_file)
         res_file.truncate()
         
-    #os.remove(path + "/alphapose-results.json")
-    #os.rmdir(path)
+    with open(path + "_ap.json", 'w') as ap_file:
+        json.dump(ap, ap_file)
+        os.remove(path + "/alphapose-results.json")
+        os.rmdir(path)
