@@ -31,6 +31,8 @@ def process_sub_file(file: TextIO) -> list[Subt]:
                 if sub is not None and sub[:-1] != "[Música]":
                     subs.append((start, end, sub[:-1].replace('- ', '').lower()))
                 start = end = sub = None
+    if sub is not None and sub[:-1] != "[Música]":
+        subs.append((start, end, sub[:-1].replace('- ', '').lower()))
     return subs
 
 if not os.path.isdir('data'):
@@ -47,7 +49,7 @@ for vid_idx, filename in enumerate(sub_files):
         subs = process_sub_file(subs_file)
     with VideoFileClip("raw/{}.mp4".format(name)) as video:
         for i, (start, end, sub) in enumerate(subs):
-            print("Video {}/{} - Clip {}/{}".format(vid_idx, len(sub_files), i, len(subs)))
+            print("Video {}/{} - Clip {}/{}".format(vid_idx + 1, len(sub_files), i + 1, len(subs)))
             if not os.path.isfile((outdir + str(i) + ".json")):
                 newvid = video.subclip(start, end)
                 newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
