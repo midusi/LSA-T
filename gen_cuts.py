@@ -10,6 +10,8 @@ input = 'raw/'
 excluded = ['noticias-en-lengua-de-senas-argentina-resumen-semanal-06122020.vtt']
 sub_files = [f for f in os.listdir(input) if f.endswith('.vtt') if f not in excluded]
 
+illegal_subs = ["[Música", "[♪ música ♪]", "[Música]"]
+
 def str_to_secs(time: str) -> float:
     'Amount of seconds for string in xx:xx:xx format'
     hours, mins, secs = time.replace(',','.').split(':')
@@ -28,10 +30,10 @@ def process_sub_file(file: TextIO) -> list[Subt]:
                 else:
                     sub = line
             else:
-                if sub is not None and sub[:-1] != "[Música]":
+                if sub is not None and sub[:-1] not in illegal_subs:
                     subs.append((start, end, sub[:-1].replace('- ', '').lower()))
                 start = end = sub = None
-    if sub is not None and sub[:-1] != "[Música]":
+    if sub is not None and sub[:-1] not in illegal_subs:
         subs.append((start, end, sub[:-1].replace('- ', '').lower()))
     return subs
 

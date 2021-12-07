@@ -1,7 +1,6 @@
 import json
 import os
 from typing import TypedDict
-from statistics import mean
 import numpy as np
 
 
@@ -46,15 +45,16 @@ def get_box(signer: list[KeypointData]) -> Box:
         box['height'] = max(box['height'], keydata['box'][3])
     return box
 
-has_ap = lambda c: os.path.isfile("data/test/" + c + "/alphapose-results.json")
+path = "data/cuts/"
+has_ap = lambda c: os.path.isfile(path + c + "/alphapose-results.json")
+cuts = [(path+vid+'/'+cut) for vid in os.listdir(path) for cut in os.listdir(path + vid) if has_ap(vid+'/'+cut)]
 
-#cuts = [d for cut in os.listdir("data/cuts") for d in os.listdir("data/cuts/" + cut) if has_ap(d)]
-tests = [d for d in os.listdir("data/test") if has_ap(d)]
 # Identify signers
-for idx, f in enumerate(tests):
-    #path = "data/cuts/" + cut + '/' + f
-    path = "data/test/" + f
-    print("{}/{}".format(idx, len(tests)))
+for idx, cut in enumerate(cuts):
+    if not os.path.isdir(cut):
+        continue
+
+    print("{}/{}: {}".format(idx + 1, len(cuts), cut))
 
     with open(path + "/alphapose-results.json") as ap_file:
         # signers contains a list of lists of keypoints data, one for each signer
@@ -77,26 +77,23 @@ for idx, f in enumerate(tests):
                 if idx % 3 == 2:
                     keypoints_for_signers[-1]['c'][int(idx/3)].append(keypoint)
 
-    max_idx, max_total = 0, None
+    scores = []
     for idx, each in enumerate(keypoints_for_signers):
         distance_x = np.array(list(map(lambda keys: max(keys) - min(keys), each['x'])))
         distance_y = np.array(list(map(lambda keys: max(keys) - min(keys), each['y'])))
         distance = np.sqrt(distance_x**2 + distance_y**2)
         #confidence = np.array(list(map(max, each['c'])))
         total = np.sum(distance[:94])
-        if max_total is None or max_total < total:
-            max_idx = idx
-            max_total = total
+        scores.append(total)
 
-    signer = signers[max_idx]
+    signer = signers[scores.index(max(scores))]
 
-    with open(path + ".json", "r+", encoding="utf-8") as res_file:
-        res = json.load(res_file)
-        res["roi"] = get_box(signer)
-        res["keypoints"] = signer
-        res_file.seek(0)
-        json.dump(res, res_file)
-        res_file.truncate()
+    with open(cut + "_signer.json", "w", encoding="utf-8") as signer_file:
+        json.dump({
+            "roi": get_box(signer),
+            "keypoints": signer,
+            "scores": scores
+        }, signer_file)
         
     with open(path + "_ap.json", 'w') as ap_file:
         json.dump(ap, ap_file)

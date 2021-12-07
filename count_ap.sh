@@ -14,4 +14,3 @@ done;
 echo "$completed / $total"
 
 unset IFS; set +f;
-
