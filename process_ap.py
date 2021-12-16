@@ -1,7 +1,6 @@
-import json
-import os
+import json, sys, os
+from math import sqrt
 from typing import TypedDict
-import numpy as np
 
 
 class Box(TypedDict):
@@ -46,22 +45,23 @@ def get_box(signer: list[KeypointData]) -> Box:
     return box
 
 path = "data/cuts/"
-has_ap = lambda c: os.path.isfile(path + c + "/alphapose-results.json")
-cuts = [(path+vid+'/'+cut) for vid in os.listdir(path) for cut in os.listdir(path + vid) if has_ap(vid+'/'+cut)]
+cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
+
+if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
+    cuts = filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts)
+
 
 # Identify signers
 for idx, cut in enumerate(cuts):
-    if not os.path.isdir(cut):
-        continue
-
     print("{}/{}: {}".format(idx + 1, len(cuts), cut))
 
-    with open(path + "/alphapose-results.json") as ap_file:
+    ap_path = cut + "_ap.json" if len(sys.argv) > 1 and sys.argv[1] == "-r" else (cut + "/alphapose-results.json")
+    with open(ap_path) as ap_file:
         # signers contains a list of lists of keypoints data, one for each signer
         ap = json.load(ap_file)
         signers: list[list[KeypointData]] = group_kds(ap)
 
-    keypoints_for_signers: list[dict[str,list[list]]] = []
+    keypoints_for_signers: list[dict[str,list[list[float]]]] = []
     for s in signers:
         keypoints_for_signers.append({
             'x': [[] for _ in range(136)],
@@ -79,23 +79,33 @@ for idx, cut in enumerate(cuts):
 
     scores = []
     for idx, each in enumerate(keypoints_for_signers):
-        distance_x = np.array(list(map(lambda keys: max(keys) - min(keys), each['x'])))
-        distance_y = np.array(list(map(lambda keys: max(keys) - min(keys), each['y'])))
-        distance = np.sqrt(distance_x**2 + distance_y**2)
-        #confidence = np.array(list(map(max, each['c'])))
-        total = np.sum(distance[:94])
-        scores.append(total)
+        distance = 0
+        for i_key in range(94, len(each['c'])):
+            xs = each['x'][i_key]
+            ys = each['y'][i_key]
+            cs = each['c'][i_key]
+            max_x, max_y, min_x, min_y = 0, 0, None, None
+            for i_frame in range(len(cs)):
+                if cs[i_frame] > 0.5:
+                    max_x = max(max_x, xs[i_frame])
+                    max_y = max(max_y, ys[i_frame])
+                    min_x = xs[i_frame] if min_x is None else min(min_x, xs[i_frame])
+                    min_y = ys[i_frame] if min_y is None else min(min_y, ys[i_frame])                
+            if min_x is not None:
+                distance += sqrt((max_x - min_x)**2 + (max_y - min_y)**2)
+        scores.append(distance)
 
     signer = signers[scores.index(max(scores))]
 
     with open(cut + "_signer.json", "w", encoding="utf-8") as signer_file:
         json.dump({
+            "scores": scores,
             "roi": get_box(signer),
-            "keypoints": signer,
-            "scores": scores
-        }, signer_file)
-        
-    with open(path + "_ap.json", 'w') as ap_file:
-        json.dump(ap, ap_file)
-        os.remove(path + "/alphapose-results.json")
-        os.rmdir(path)
+            "keypoints": signer
+        }, signer_file, indent=4)
+    
+    if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
+        with open(cut + "_ap.json", 'w') as ap_file:
+            json.dump(ap, ap_file)
+            os.remove(cut + "/alphapose-results.json")
+            os.rmdir(cut)
