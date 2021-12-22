@@ -78,12 +78,12 @@ for idx, cut in enumerate(cuts):
                     keypoints_for_signers[-1]['c'][int(idx/3)].append(keypoint)
 
     scores = []
-    for idx, each in enumerate(keypoints_for_signers):
+    for i_signer, each in enumerate(keypoints_for_signers):
         distance = 0
-        for i_key in range(94, len(each['c'])):
-            xs = each['x'][i_key]
-            ys = each['y'][i_key]
-            cs = each['c'][i_key]
+        for i_keyp in range(94, len(each['c'])):
+            xs = each['x'][i_keyp]
+            ys = each['y'][i_keyp]
+            cs = each['c'][i_keyp]
             max_x, max_y, min_x, min_y = 0, 0, None, None
             for i_frame in range(len(cs)):
                 if cs[i_frame] > 0.5:
