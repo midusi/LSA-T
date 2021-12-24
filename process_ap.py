@@ -44,6 +44,12 @@ def get_box(signer: list[KeypointData]) -> Box:
         box['height'] = max(box['height'], keydata['box'][3])
     return box
 
+def relative_pos(box: list[float], x: float, y: float) -> tuple[float, float]:
+    center_x = box[0] + box[2]/2
+    center_y = box[1] + box[3]/2
+    return (abs(center_x - x), abs(center_y - y))
+
+
 path = "data/cuts/"
 cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
 
@@ -81,16 +87,18 @@ for idx, cut in enumerate(cuts):
     for i_signer, each in enumerate(keypoints_for_signers):
         distance = 0
         for i_keyp in range(94, len(each['c'])):
+            box = signers[i_signer][i_keyp]['box']
             xs = each['x'][i_keyp]
             ys = each['y'][i_keyp]
             cs = each['c'][i_keyp]
             max_x, max_y, min_x, min_y = 0, 0, None, None
             for i_frame in range(len(cs)):
                 if cs[i_frame] > 0.5:
-                    max_x = max(max_x, xs[i_frame])
-                    max_y = max(max_y, ys[i_frame])
-                    min_x = xs[i_frame] if min_x is None else min(min_x, xs[i_frame])
-                    min_y = ys[i_frame] if min_y is None else min(min_y, ys[i_frame])                
+                    rel_x, rel_y = relative_pos(box, xs[i_frame], ys[i_frame])
+                    max_x = max(max_x, rel_x)
+                    max_y = max(max_y, rel_y)
+                    min_x = rel_x if min_x is None else min(min_x, rel_x)
+                    min_y = rel_y if min_y is None else min(min_y, rel_y)                
             if min_x is not None:
                 distance += sqrt((max_x - min_x)**2 + (max_y - min_y)**2)
         scores.append(distance)
