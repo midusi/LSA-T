@@ -55,7 +55,8 @@ cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdi
 
 if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
     cuts = filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts)
-
+else:
+    cuts = filter(lambda c: os.path.isfile(c + "_ap.json"), cuts)
 
 # Identify signers
 for idx, cut in enumerate(cuts):
