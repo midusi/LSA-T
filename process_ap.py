@@ -87,12 +87,12 @@ for idx, cut in enumerate(cuts):
     for i_signer, each in enumerate(keypoints_for_signers):
         distance = 0
         for i_keyp in range(94, len(each['c'])):
-            box = signers[i_signer][i_keyp]['box']
             xs = each['x'][i_keyp]
             ys = each['y'][i_keyp]
             cs = each['c'][i_keyp]
             max_x, max_y, min_x, min_y = 0, 0, None, None
             for i_frame in range(len(cs)):
+                box = signers[i_signer][i_frame]['box']
                 if cs[i_frame] > 0.5:
                     rel_x, rel_y = relative_pos(box, xs[i_frame], ys[i_frame])
                     max_x = max(max_x, rel_x)
