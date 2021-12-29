@@ -54,9 +54,9 @@ path = "data/cuts/"
 cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
 
 if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
-    cuts = filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts)
+    cuts = list(filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts))
 else:
-    cuts = filter(lambda c: os.path.isfile(c + "_ap.json"), cuts)
+    cuts = list(filter(lambda c: os.path.isfile(c + "_ap.json"), cuts))
 
 # Identify signers
 for idx, cut in enumerate(cuts):
@@ -85,6 +85,8 @@ for idx, cut in enumerate(cuts):
                     keypoints_for_signers[-1]['c'][int(idx/3)].append(keypoint)
 
     scores = []
+    # movement is calculated from frame i to frame i+step
+    step = 5
     for i_signer, each in enumerate(keypoints_for_signers):
         distance = 0
         for i_keyp in range(94, len(each['c'])):
@@ -92,16 +94,12 @@ for idx, cut in enumerate(cuts):
             ys = each['y'][i_keyp]
             cs = each['c'][i_keyp]
             max_x, max_y, min_x, min_y = 0, 0, None, None
-            for i_frame in range(len(cs)):
-                box = signers[i_signer][i_frame]['box']
-                if cs[i_frame] > 0.5:
-                    rel_x, rel_y = relative_pos(box, xs[i_frame], ys[i_frame])
-                    max_x = max(max_x, rel_x)
-                    max_y = max(max_y, rel_y)
-                    min_x = rel_x if min_x is None else min(min_x, rel_x)
-                    min_y = rel_y if min_y is None else min(min_y, rel_y)                
-            if min_x is not None:
-                distance += sqrt((max_x - min_x)**2 + (max_y - min_y)**2)
+            for i_frame in range(0, len(cs), step):
+                if i_frame + step < len(cs) and cs[i_frame] > 0.5 and cs[i_frame + step] > 0.5:
+                    box1, box2 = signers[i_signer][i_frame]['box'], signers[i_signer][i_frame + step]['box']
+                    rel_x1, rel_y1 = relative_pos(box1, xs[i_frame], ys[i_frame])
+                    rel_x2, rel_y2 = relative_pos(box2, xs[i_frame + step], ys[i_frame + step])
+                    distance += sqrt((rel_x1 - rel_x2)**2 + (rel_y1 - rel_y2)**2)
         scores.append(distance)
 
     signer = signers[scores.index(max(scores))]
