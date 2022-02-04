@@ -1,5 +1,5 @@
 from typing import TextIO
-import os, sys, json
+import os, argparse, json
 from moviepy.video.io.VideoFileClip import VideoFileClip
 
 
@@ -38,6 +38,10 @@ def process_sub_file(file: TextIO) -> list[Subt]:
     return subs
 
 def main():
+    parser = argparse.ArgumentParser(description='''Parses subtitles files (.vtt) and generates, for each line of subtitles of the videos the clip corresponding to the that line of subtitles and a json file with it's metadata.''')
+    parser.add_argument('--delete', '-d', help='deletes both video and subtitle file after processing', action='store_true')
+    must_del: bool = parser.parse_args().delete
+
     if not os.path.isdir('data'):
         os.mkdir('data')
     if not os.path.isdir('data/cuts'):
@@ -63,7 +67,7 @@ def main():
                             'end': end,
                             'video': name
                         }, data_file)
-        if len(sys.argv) > 1 and sys.argv[1] == "-d":
+        if must_del:
             os.remove("raw/{}.mp4".format(name))
             os.remove("raw/{}.vtt".format(name))
 

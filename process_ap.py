@@ -1,4 +1,4 @@
-import json, sys, os
+import json, argparse, os
 from math import sqrt
 from typing import TypedDict
 
@@ -50,19 +50,20 @@ def relative_pos(box: list[float], x: float, y: float) -> tuple[float, float]:
     return (abs(center_x - x), abs(center_y - y))
 
 def main():
+    parser = argparse.ArgumentParser(description='''Infers, in case that there is many people detected by AlphaPose in one clip, which one is the signer.''')
+    parser.add_argument('--rerun', '-r', help='runs it over all files, even those already processed', action='store_true')
+    must_rerun: bool = parser.parse_args().rerun
+
     path = "data/cuts/"
     cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
 
-    if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
-        cuts = list(filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts))
-    else:
-        cuts = list(filter(lambda c: os.path.isfile(c + "_ap.json"), cuts))
+    cuts = list(filter(lambda c: os.path.isfile(c + ("_ap.json" if must_rerun else "/alphapose-results.json")), cuts))
 
     # Identify signers
     for idx, cut in enumerate(cuts):
         print("{}/{}: {}".format(idx + 1, len(cuts), cut))
 
-        ap_path = cut + "_ap.json" if len(sys.argv) > 1 and sys.argv[1] == "-r" else (cut + "/alphapose-results.json")
+        ap_path = cut + ("_ap.json" if must_rerun else "/alphapose-results.json")
         with open(ap_path) as ap_file:
             # signers contains a list of lists of keypoints data, one for each signer
             ap = json.load(ap_file)
@@ -93,7 +94,6 @@ def main():
                 xs = each['x'][i_keyp]
                 ys = each['y'][i_keyp]
                 cs = each['c'][i_keyp]
-                max_x, max_y, min_x, min_y = 0, 0, None, None
                 for i_frame in range(0, len(cs), step):
                     if i_frame + step < len(cs) and cs[i_frame] > 0.5 and cs[i_frame + step] > 0.5:
                         box1, box2 = signers[i_signer][i_frame]['box'], signers[i_signer][i_frame + step]['box']
@@ -111,7 +111,7 @@ def main():
                 "keypoints": signer
             }, signer_file, indent=4)
         
-        if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
+        if not must_rerun:
             with open(cut + "_ap.json", 'w') as ap_file:
                 json.dump(ap, ap_file)
                 os.remove(cut + "/alphapose-results.json")
