@@ -12,7 +12,7 @@ Code used to generate [pensar nombre] dataset from public videos found in [CN So
     * **start**: time in seconds where the subtitle starts.
     * **end**: time in seconds where the subtitle ends.
     * **video**: title of the video **V** which the clip belongs to.
-  * Parameter ``-d`` deletes both video and subtitle file after processing.
+  * Parameter ``-d`` (or ``--delete``) deletes both video and subtitle file after processing.
 * ``run_ap.sh`` takes as input the path where AlphaPose is installed and runs AlphaPose over all of the generated clips. Output for each **i**th clip is stored in ``data/V/i/alphapose_results.json``
 * ``process_ap.py`` infers, in case that there is many people detected by AlphaPose in one clip, which one is the signer. It generates, for each **i**th clip:
   * ``data/V/i_ap.json`` with the raw AlphaPose results for the **i**th video using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
@@ -20,7 +20,7 @@ Code used to generate [pensar nombre] dataset from public videos found in [CN So
     * **scores**: for each person in the clip, the amount of "movement" in its hands. It is used to infer who is the signer.
     * **roi**: the considered region of interest of the clip, meaning the box corresponding to the infered signer of the clip.
     * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``data/V/i_ap.json``.
-  * By default it only runs over the videos that haven't been processed yet (there is ``data/V/i/alphapose_results.json`` file, that is deleted after processing and it's content stored in ``data/V/i_ap.json``). Parameter ``-r`` runs it over already processed files.
+  * By default it only runs over the videos that haven't been processed yet (there is ``data/V/i/alphapose_results.json`` file, that is deleted after processing and it's content stored in ``data/V/i_ap.json``). Parameter ``-r`` (or ``--rerun``) runs it over already processed files.
 
 ## Notebooks
 
