@@ -37,31 +37,35 @@ def process_sub_file(file: TextIO) -> list[Subt]:
         subs.append((start, end, sub[:-1].replace('- ', '').lower()))
     return subs
 
-if not os.path.isdir('data'):
-    os.mkdir('data')
-if not os.path.isdir('data/cuts'):
-    os.mkdir('data/cuts')
+def main():
+    if not os.path.isdir('data'):
+        os.mkdir('data')
+    if not os.path.isdir('data/cuts'):
+        os.mkdir('data/cuts')
 
-for vid_idx, filename in enumerate(sub_files):
-    name = filename[:-4]
-    outdir = "data/cuts/{}/".format(name)
-    if not os.path.isdir(outdir):
-        os.mkdir(outdir)
-    with open(input + filename, 'r', encoding='utf-8') as subs_file:
-        subs = process_sub_file(subs_file)
-    with VideoFileClip("raw/{}.mp4".format(name)) as video:
-        for i, (start, end, sub) in enumerate(subs):
-            print("Video {}/{} - Clip {}/{}".format(vid_idx + 1, len(sub_files), i + 1, len(subs)))
-            if not os.path.isfile((outdir + str(i) + ".json")):
-                newvid = video.subclip(start, end)
-                newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
-                with open(outdir + str(i) + ".json", 'w', encoding='utf-8') as data_file:
-                    json.dump({
-                        'label': sub,
-                        'start': start,
-                        'end': end,
-                        'video': name
-                    }, data_file)
-    if len(sys.argv) > 1 and sys.argv[1] == "-d":
-        os.remove("raw/{}.mp4".format(name))
-        os.remove("raw/{}.vtt".format(name))
+    for vid_idx, filename in enumerate(sub_files):
+        name = filename[:-4]
+        outdir = "data/cuts/{}/".format(name)
+        if not os.path.isdir(outdir):
+            os.mkdir(outdir)
+        with open(input + filename, 'r', encoding='utf-8') as subs_file:
+            subs = process_sub_file(subs_file)
+        with VideoFileClip("raw/{}.mp4".format(name)) as video:
+            for i, (start, end, sub) in enumerate(subs):
+                print("Video {}/{} - Clip {}/{}".format(vid_idx + 1, len(sub_files), i + 1, len(subs)))
+                if not os.path.isfile((outdir + str(i) + ".json")):
+                    newvid = video.subclip(start, end)
+                    newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
+                    with open(outdir + str(i) + ".json", 'w', encoding='utf-8') as data_file:
+                        json.dump({
+                            'label': sub,
+                            'start': start,
+                            'end': end,
+                            'video': name
+                        }, data_file)
+        if len(sys.argv) > 1 and sys.argv[1] == "-d":
+            os.remove("raw/{}.mp4".format(name))
+            os.remove("raw/{}.vtt".format(name))
+
+if __name__ == "__main__":
+    main()

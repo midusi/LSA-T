@@ -49,70 +49,73 @@ def relative_pos(box: list[float], x: float, y: float) -> tuple[float, float]:
     center_y = box[1] + box[3]/2
     return (abs(center_x - x), abs(center_y - y))
 
+def main():
+    path = "data/cuts/"
+    cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
 
-path = "data/cuts/"
-cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
-
-if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
-    cuts = list(filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts))
-else:
-    cuts = list(filter(lambda c: os.path.isfile(c + "_ap.json"), cuts))
-
-# Identify signers
-for idx, cut in enumerate(cuts):
-    print("{}/{}: {}".format(idx + 1, len(cuts), cut))
-
-    ap_path = cut + "_ap.json" if len(sys.argv) > 1 and sys.argv[1] == "-r" else (cut + "/alphapose-results.json")
-    with open(ap_path) as ap_file:
-        # signers contains a list of lists of keypoints data, one for each signer
-        ap = json.load(ap_file)
-        signers: list[list[KeypointData]] = group_kds(ap)
-
-    keypoints_for_signers: list[dict[str,list[list[float]]]] = []
-    for s in signers:
-        keypoints_for_signers.append({
-            'x': [[] for _ in range(136)],
-            'y': [[] for _ in range(136)],
-            'c': [[] for _ in range(136)]
-        })
-        for keydata in s:
-            for idx, keypoint in enumerate(keydata["keypoints"]):
-                if idx % 3 == 0:
-                    keypoints_for_signers[-1]['x'][int(idx/3)].append(keypoint)
-                if idx % 3 == 1:
-                    keypoints_for_signers[-1]['y'][int(idx/3)].append(keypoint)
-                if idx % 3 == 2:
-                    keypoints_for_signers[-1]['c'][int(idx/3)].append(keypoint)
-
-    scores = []
-    # movement is calculated from frame i to frame i+step
-    step = 5
-    for i_signer, each in enumerate(keypoints_for_signers):
-        distance = 0
-        for i_keyp in range(94, len(each['c'])):
-            xs = each['x'][i_keyp]
-            ys = each['y'][i_keyp]
-            cs = each['c'][i_keyp]
-            max_x, max_y, min_x, min_y = 0, 0, None, None
-            for i_frame in range(0, len(cs), step):
-                if i_frame + step < len(cs) and cs[i_frame] > 0.5 and cs[i_frame + step] > 0.5:
-                    box1, box2 = signers[i_signer][i_frame]['box'], signers[i_signer][i_frame + step]['box']
-                    rel_x1, rel_y1 = relative_pos(box1, xs[i_frame], ys[i_frame])
-                    rel_x2, rel_y2 = relative_pos(box2, xs[i_frame + step], ys[i_frame + step])
-                    distance += sqrt((rel_x1 - rel_x2)**2 + (rel_y1 - rel_y2)**2)
-        scores.append(distance)
-
-    signer = signers[scores.index(max(scores))]
-
-    with open(cut + "_signer.json", "w", encoding="utf-8") as signer_file:
-        json.dump({
-            "scores": scores,
-            "roi": get_box(signer),
-            "keypoints": signer
-        }, signer_file, indent=4)
-    
     if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
-        with open(cut + "_ap.json", 'w') as ap_file:
-            json.dump(ap, ap_file)
-            os.remove(cut + "/alphapose-results.json")
-            os.rmdir(cut)
+        cuts = list(filter(lambda c: os.path.isfile(c + "/alphapose-results.json"), cuts))
+    else:
+        cuts = list(filter(lambda c: os.path.isfile(c + "_ap.json"), cuts))
+
+    # Identify signers
+    for idx, cut in enumerate(cuts):
+        print("{}/{}: {}".format(idx + 1, len(cuts), cut))
+
+        ap_path = cut + "_ap.json" if len(sys.argv) > 1 and sys.argv[1] == "-r" else (cut + "/alphapose-results.json")
+        with open(ap_path) as ap_file:
+            # signers contains a list of lists of keypoints data, one for each signer
+            ap = json.load(ap_file)
+            signers: list[list[KeypointData]] = group_kds(ap)
+
+        keypoints_for_signers: list[dict[str,list[list[float]]]] = []
+        for s in signers:
+            keypoints_for_signers.append({
+                'x': [[] for _ in range(136)],
+                'y': [[] for _ in range(136)],
+                'c': [[] for _ in range(136)]
+            })
+            for keydata in s:
+                for idx, keypoint in enumerate(keydata["keypoints"]):
+                    if idx % 3 == 0:
+                        keypoints_for_signers[-1]['x'][int(idx/3)].append(keypoint)
+                    if idx % 3 == 1:
+                        keypoints_for_signers[-1]['y'][int(idx/3)].append(keypoint)
+                    if idx % 3 == 2:
+                        keypoints_for_signers[-1]['c'][int(idx/3)].append(keypoint)
+
+        scores = []
+        # movement is calculated from frame i to frame i+step
+        step = 5
+        for i_signer, each in enumerate(keypoints_for_signers):
+            distance = 0
+            for i_keyp in range(94, len(each['c'])):
+                xs = each['x'][i_keyp]
+                ys = each['y'][i_keyp]
+                cs = each['c'][i_keyp]
+                max_x, max_y, min_x, min_y = 0, 0, None, None
+                for i_frame in range(0, len(cs), step):
+                    if i_frame + step < len(cs) and cs[i_frame] > 0.5 and cs[i_frame + step] > 0.5:
+                        box1, box2 = signers[i_signer][i_frame]['box'], signers[i_signer][i_frame + step]['box']
+                        rel_x1, rel_y1 = relative_pos(box1, xs[i_frame], ys[i_frame])
+                        rel_x2, rel_y2 = relative_pos(box2, xs[i_frame + step], ys[i_frame + step])
+                        distance += sqrt((rel_x1 - rel_x2)**2 + (rel_y1 - rel_y2)**2)
+            scores.append(distance)
+
+        signer = signers[scores.index(max(scores))]
+
+        with open(cut + "_signer.json", "w", encoding="utf-8") as signer_file:
+            json.dump({
+                "scores": scores,
+                "roi": get_box(signer),
+                "keypoints": signer
+            }, signer_file, indent=4)
+        
+        if not (len(sys.argv) > 1 and sys.argv[1] == "-r"):
+            with open(cut + "_ap.json", 'w') as ap_file:
+                json.dump(ap, ap_file)
+                os.remove(cut + "/alphapose-results.json")
+                os.rmdir(cut)
+
+if __name__ == "__main__":
+    main()
