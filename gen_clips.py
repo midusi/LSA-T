@@ -49,14 +49,14 @@ def main():
 
     for vid_idx, filename in enumerate(sub_files):
         name = filename[:-4]
-        outdir = "data/cuts/{}/".format(name)
+        outdir = f"data/cuts/{name}/"
         if not os.path.isdir(outdir):
             os.mkdir(outdir)
         with open(input + filename, 'r', encoding='utf-8') as subs_file:
             subs = process_sub_file(subs_file)
-        with VideoFileClip("raw/{}.mp4".format(name)) as video:
+        with VideoFileClip(f"raw/{name}.mp4") as video:
             for i, (start, end, sub) in enumerate(subs):
-                print("Video {}/{} - Clip {}/{}".format(vid_idx + 1, len(sub_files), i + 1, len(subs)))
+                print(f"Video {vid_idx + 1}/{len(sub_files)} - Clip {i + 1}/{len(subs)}")
                 if not os.path.isfile((outdir + str(i) + ".json")):
                     newvid = video.subclip(start, end)
                     newvid.write_videofile((outdir + str(i) + ".mp4"), audio=False)
@@ -68,8 +68,8 @@ def main():
                             'video': name
                         }, data_file)
         if must_del:
-            os.remove("raw/{}.mp4".format(name))
-            os.remove("raw/{}.vtt".format(name))
+            os.remove(f"raw/{name}.mp4")
+            os.remove(f"raw/{name}.vtt")
 
 if __name__ == "__main__":
     main()

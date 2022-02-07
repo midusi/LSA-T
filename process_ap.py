@@ -61,7 +61,7 @@ def main():
 
     # Identify signers
     for idx, cut in enumerate(cuts):
-        print("{}/{}: {}".format(idx + 1, len(cuts), cut))
+        print(f"{idx + 1}/{len(cuts)}: {cut}")
 
         ap_path = cut + ("_ap.json" if must_rerun else "/alphapose-results.json")
         with open(ap_path) as ap_file:

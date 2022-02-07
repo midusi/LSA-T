@@ -30,7 +30,7 @@ def main():
     for idx, yt in enumerate(videos):
         yt.register_on_progress_callback(on_progress)
         st = yt.streams.filter(adaptive=True, file_extension='mp4').order_by('resolution').last()
-        print("\nVideo {}/{}: {}".format(idx + 1, len(videos), yt.title.replace('/', '-')), '\n', st)
+        print(f"\nVideo {idx + 1}/{len(videos)}: {yt.title.replace('/', '-')}\n{st}")
         if not os.path.isfile('./raw/' + slugify(yt.title) + '.vtt') and st is not None:
             st.download(output_path='./raw/', filename=slugify(yt.title) + '.mp4')
             with open('./raw/' + slugify(yt.title) + '.vtt', 'w') as subs_file:
