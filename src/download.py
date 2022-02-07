@@ -1,4 +1,5 @@
-import os, unicodedata, re
+import unicodedata, re
+from pathlib import Path
 from pytube import Playlist, YouTube
 from pytube.cli import on_progress
 
@@ -31,9 +32,12 @@ def main():
         yt.register_on_progress_callback(on_progress)
         st = yt.streams.filter(adaptive=True, file_extension='mp4').order_by('resolution').last()
         print(f"\nVideo {idx + 1}/{len(videos)}: {yt.title.replace('/', '-')}\n{st}")
-        if not os.path.isfile('./raw/' + slugify(yt.title) + '.vtt') and st is not None:
-            st.download(output_path='./raw/', filename=slugify(yt.title) + '.mp4')
-            with open('./raw/' + slugify(yt.title) + '.vtt', 'w') as subs_file:
+        path = Path("../data/raw")
+        path.mkdir(exist_ok=True,parents=True)
+        vid_path = path / (slugify(yt.title) + '.vtt')
+        if not vid_path.exists() and st is not None:
+            st.download(output_path=path.resolve(), filename=slugify(yt.title) + '.mp4')
+            with vid_path.open(mode='w') as subs_file:
                 subs_file.write(yt.captions['es-419'].generate_srt_captions())
 
 if __name__ == "__main__":

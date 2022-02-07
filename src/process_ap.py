@@ -1,4 +1,5 @@
-import json, argparse, os
+import json, argparse
+from pathlib import Path
 from math import sqrt
 from typing import TypedDict
 
@@ -16,6 +17,16 @@ class KeypointData(TypedDict):
     score: float
     box: list[float]
     idx: list[float]
+
+def get_cut_paths(cut: Path) -> dict[str, Path]:
+    name = cut.name[:-4]
+    return {
+        'mp4': cut,
+        'json': cut.parent / f"{name}.json",
+        'signer': cut.parent / f"{name}_signer.json",
+        'ap': cut.parent / f"{name}_ap.json",
+        'ap_raw': cut.parent / {name} / "alphapose-results.json",
+    }
 
 def group_kds(kds: list[KeypointData]) -> list[list[KeypointData]]:
     '''Groups keypoint data objects that belong to same frame'''
@@ -54,17 +65,17 @@ def main():
     parser.add_argument('--rerun', '-r', help='runs it over all files, even those already processed', action='store_true')
     must_rerun: bool = parser.parse_args().rerun
 
-    path = "data/cuts/"
-    cuts = [(path+vid+'/'+cut[:-4]) for vid in os.listdir(path) for cut in os.listdir(path + vid) if cut.endswith(".mp4")]
+    path = Path("../data/cuts/")
+    cuts = map(get_cut_paths, path.glob('**/*.mp4'))
 
-    cuts = list(filter(lambda c: os.path.isfile(c + ("_ap.json" if must_rerun else "/alphapose-results.json")), cuts))
+    cuts = list(filter(lambda c: c['ap'].exists() if must_rerun else c['ap_raw'].exists(), cuts))
 
     # Identify signers
     for idx, cut in enumerate(cuts):
         print(f"{idx + 1}/{len(cuts)}: {cut}")
 
-        ap_path = cut + ("_ap.json" if must_rerun else "/alphapose-results.json")
-        with open(ap_path) as ap_file:
+        ap_path = cut['ap'] if must_rerun else cut['ap_raw']
+        with ap_path.open() as ap_file:
             # signers contains a list of lists of keypoints data, one for each signer
             ap = json.load(ap_file)
             signers: list[list[KeypointData]] = group_kds(ap)
@@ -104,7 +115,7 @@ def main():
 
         signer = signers[scores.index(max(scores))]
 
-        with open(cut + "_signer.json", "w", encoding="utf-8") as signer_file:
+        with cut['signer'].open(mode='w', encoding='utf-8') as signer_file:
             json.dump({
                 "scores": scores,
                 "roi": get_box(signer),
@@ -112,10 +123,10 @@ def main():
             }, signer_file, indent=4)
         
         if not must_rerun:
-            with open(cut + "_ap.json", 'w') as ap_file:
+            with cut['ap'].open(mode='w') as ap_file:
                 json.dump(ap, ap_file)
-                os.remove(cut + "/alphapose-results.json")
-                os.rmdir(cut)
+                cut['ap_raw'].unlink()
+                cut['ap_raw'].parent.rmdir()
 
 if __name__ == "__main__":
     main()
