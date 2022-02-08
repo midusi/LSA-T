@@ -58,7 +58,7 @@ def get_box(signer: list[KeypointData]) -> Box:
 def relative_pos(box: list[float], x: float, y: float) -> tuple[float, float]:
     center_x = box[0] + box[2]/2
     center_y = box[1] + box[3]/2
-    return (abs(center_x - x), abs(center_y - y))
+    return (center_x - x, center_y - y)
 
 def main():
     parser = argparse.ArgumentParser(description='''Infers, in case that there is many people detected by AlphaPose in one clip, which one is the signer.''')
