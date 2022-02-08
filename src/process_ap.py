@@ -28,6 +28,14 @@ def get_cut_paths(cut: Path) -> dict[str, Path]:
         'ap_raw': cut.parent / {name} / "alphapose-results.json",
     }
 
+def format_box(box: list[float]) -> Box:
+    return {
+        'x1': box[0],
+        'y1': box[1],
+        'width': box[2],
+        'height': box[3]
+    }
+
 def group_kds(kds: list[KeypointData]) -> list[list[KeypointData]]:
     '''Groups keypoint data objects that belong to same frame'''
     grouped: list[list[KeypointData]] = [[]]
@@ -55,9 +63,9 @@ def get_box(signer: list[KeypointData]) -> Box:
         box['height'] = max(box['height'], keydata['box'][3])
     return box
 
-def relative_pos(box: list[float], x: float, y: float) -> tuple[float, float]:
-    center_x = box[0] + box[2]/2
-    center_y = box[1] + box[3]/2
+def relative_pos(box: Box, x: float, y: float) -> tuple[float, float]:
+    center_x = box['x1'] + box['width']/2
+    center_y = box['y1'] + box['height']/2
     return (center_x - x, center_y - y)
 
 def main():
@@ -108,8 +116,8 @@ def main():
                 for i_frame in range(0, len(cs), step):
                     if i_frame + step < len(cs) and cs[i_frame] > 0.5 and cs[i_frame + step] > 0.5:
                         box1, box2 = signers[i_signer][i_frame]['box'], signers[i_signer][i_frame + step]['box']
-                        rel_x1, rel_y1 = relative_pos(box1, xs[i_frame], ys[i_frame])
-                        rel_x2, rel_y2 = relative_pos(box2, xs[i_frame + step], ys[i_frame + step])
+                        rel_x1, rel_y1 = relative_pos(format_box(box1), xs[i_frame], ys[i_frame])
+                        rel_x2, rel_y2 = relative_pos(format_box(box2), xs[i_frame + step], ys[i_frame + step])
                         distance += sqrt((rel_x1 - rel_x2)**2 + (rel_y1 - rel_y2)**2)
             scores.append(distance)
 
