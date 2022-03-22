@@ -46,7 +46,7 @@ def main():
     must_gen: bool = parser.parse_args().generate
 
     if must_gen:
-        fo.load_dataset("cn_sordos").delete()
+        fo.load_dataset("cn_sordos")
         dataset = fo.Dataset("cn_sordos", persistent=True)
         path = Path("./data/cuts")
         clips = list(path.rglob("*.mp4"))
