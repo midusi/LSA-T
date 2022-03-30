@@ -21,11 +21,16 @@ Code used to generate [pensar nombre] dataset from public videos found in [CN So
     * **roi**: the considered region of interest of the clip, meaning the box corresponding to the infered signer of the clip.
     * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``data/V/i_ap.json``.
   * By default it only runs over the videos that haven't been processed yet (there is ``data/V/i/alphapose_results.json`` file, that is deleted after processing and it's content stored in ``data/V/i_ap.json``). Parameter ``-r`` (or ``--rerun``) runs it over already processed files.
+* ``gen_extra_dbs`` contains scripts for the generation of extra versions of the database:
+  * ``gen_cuts_only_db.py`` generate a database in ``data/cuts_only`` that contains only the videos and metadata (excluding keypoint info)
+  * ``gen_vis_db.py`` generates a lightweight version of the database with videos in lower quality and that have the keipoints and roi embebbed on them. It is used for visualization.
 
-## Notebooks
 
-Stored in ``notebooks`` show visualizations and statistics about the database content. They do not take part in the database generation and processing.
+## Visualization
+
+Stored in ``visualization`` show visualizations and statistics about the database content. They do not take part in the database generation and processing.
 
 * ``subtitles_analysis.ipynb`` shows statistics about the clips duration, words per clip, most used words and n-grams.
 * ``signers_analysis.ipynb`` shows statistics about amount of people per clip and confidence about the one chosed as signer.
-* ``vis_cuts.ipynb`` allows to visualize videos according to certain criteria such as amount of signers and confidence of the chosed signer. It shows both hands keypionts and roi over the clips.
+* ``fiftyone_visualization.py`` starts a [FiftyOne](https://voxel51.com/docs/fiftyone/) sessions and loads the database for visualization. First time might take a while to build the dataset in the correct format.
+  * Parameter ``--full`` or ``-f`` is used to load the ful version of the dataset (with HQ videos and keypoint and roi live data). This may need a lot of memory.
