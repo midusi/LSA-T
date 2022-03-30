@@ -11,6 +11,18 @@ def get_score(scores):
     return 0 if m1 == 0 else (m1 - max(scores)) / m1
 
 def store_sample(clip_file: Path, dataset):
+    sample = Sample(clip_file)
+    with Path(str(clip_file.resolve())[:-3] + "json").open() as sample_data_file:
+        sample_data = json.load(sample_data_file)
+        sample["video"] = sample_data["video"]
+        sample["start"] = sample_data["start"]
+        sample["end"] = sample_data["end"]
+        sample["roi"] = sample_data["roi"]
+        sample["ground_truth"] = fo.Classification(label = sample_data["label"])
+        sample["confidence"] = 0 if len(sample_data["scores"]) == 0 else 1 if len(sample_data["scores"]) == 1 else get_score(list(map(float,sample_data["scores"])))
+    dataset.add_sample(sample)
+
+def store_full_sample(clip_file: Path, dataset):
     print(clip_file)
     sample = Sample(clip_file)
     with Path(str(clip_file.resolve())[:-3] + "json").open() as sample_data_file:
@@ -42,18 +54,22 @@ def store_sample(clip_file: Path, dataset):
 
 def main():
     parser = argparse.ArgumentParser(description='''Generates DB able to visualize clips on fiftyone and starts fiftyone.''')
-    parser.add_argument('--generate', '-g', help='generates the database, only necessary the first time running the script', action='store_true')
-    must_gen: bool = parser.parse_args().generate
+    parser.add_argument('--full', '-f', help='loads the full database (hd videos and uses live keypoints and roi data', action='store_true')
+    full_db: bool = parser.parse_args().full
 
-    if must_gen:
-        dataset = fo.Dataset("cn_sordos", persistent=True)
-        path = Path("./data/cuts")
+    db_name = "cn_sordos" if full_db else "cn_sordos_vis"
+    path = Path("./data/cuts") if full_db else Path("./data/cuts_visualization")
+    try:
+        dataset = fo.load_dataset(db_name)
+    except:
+        dataset = fo.Dataset(db_name, persistent=True)
         clips = list(path.rglob("*.mp4"))
         for i,c in enumerate(clips,1):
             print(f"{i}/{len(clips)}")
-            store_sample(c, dataset)
-    else:
-        dataset = fo.load_dataset("cn_sordos")
+            if full_db:
+                store_full_sample(c, dataset)
+            else:
+                store_sample(c, dataset)
 
     # View summary info about the dataset
     print(dataset)
