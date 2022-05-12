@@ -55,12 +55,17 @@ def store_full_sample(clip_file: Path, dataset):
 def main():
     parser = argparse.ArgumentParser(description='''Generates DB able to visualize clips on fiftyone and starts fiftyone.''')
     parser.add_argument('--full', '-f', help='loads the full database (hd videos and uses live keypoints and roi data', action='store_true')
+    parser.add_argument('--reload', '-r', help='reloads the database', action='store_true')
     full_db: bool = parser.parse_args().full
+    reload_db: bool = parser.parse_args().reload
 
     db_name = "cn_sordos" if full_db else "cn_sordos_vis"
     path = Path("./data/cuts") if full_db else Path("./data/cuts_visualization")
     try:
         dataset = fo.load_dataset(db_name)
+        if reload_db:
+            dataset.delete()
+            raise Exception()
     except:
         dataset = fo.Dataset(db_name, persistent=True)
         clips = list(path.rglob("*.mp4"))
