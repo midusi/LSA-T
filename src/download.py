@@ -21,22 +21,28 @@ def slugify(value, allow_unicode=False):
 
 def main():
     # Playlists de resumen semanal, ecologia, ultimo momento y #leyfederalLSA
-    playlists = ["https://www.youtube.com/playlist?list=PLhysX0rYXWV2xM3T4KAqaAEg-GEhDXwai",
-                "https://www.youtube.com/playlist?list=PLhysX0rYXWV2DioiHvMjzJs_4UWifmPo9",
-                "https://www.youtube.com/playlist?list=PLhysX0rYXWV2wQnK2nxU4gvcmq5yrHli3",
-                "https://www.youtube.com/playlist?list=PLhysX0rYXWV2WNLgIyBiyn3wizILOTuP6"]
+    playlists = {
+        'resumen_semanal': "https://www.youtube.com/playlist?list=PLhysX0rYXWV2xM3T4KAqaAEg-GEhDXwai",
+        'ecologia': "https://www.youtube.com/playlist?list=PLhysX0rYXWV2DioiHvMjzJs_4UWifmPo9",
+        'ultimo_momento': "https://www.youtube.com/playlist?list=PLhysX0rYXWV2wQnK2nxU4gvcmq5yrHli3",
+        'ley_federal_lsa': "https://www.youtube.com/playlist?list=PLhysX0rYXWV2WNLgIyBiyn3wizILOTuP6"
+    }
+    path = Path("data/raw")
+    path.mkdir(exist_ok=True,parents=True)
 
-    videos: list[YouTube] = [item for sublist in map(lambda x: Playlist(x).videos, playlists) for item in sublist if 'es-419' in item.captions]
+    print("Fetching video list")
+    videos = [(vid_path, yt) for pl_videos in map(lambda pl: 
+                [((path / f"{pl[0]}/{slugify(video.title)}.vtt"), video) for video in Playlist(pl[1]).videos],
+                playlists.items())
+            for (vid_path, yt) in pl_videos if ('es-419' in yt.captions) and not vid_path.exists()]
 
-    for idx, yt in enumerate(videos):
+    for idx, (vid_path, yt) in enumerate(videos):
+        vid_path.parent.mkdir(exist_ok=True,parents=True)
         yt.register_on_progress_callback(on_progress)
         st = yt.streams.filter(adaptive=True, file_extension='mp4').order_by('resolution').last()
         print(f"\nVideo {idx + 1}/{len(videos)}: {yt.title.replace('/', '-')}\n{st}")
-        path = Path("../data/raw")
-        path.mkdir(exist_ok=True,parents=True)
-        vid_path = path / (slugify(yt.title) + '.vtt')
-        if not vid_path.exists() and st is not None:
-            st.download(output_path=path.resolve(), filename=slugify(yt.title) + '.mp4')
+        if st is not None:
+            st.download(output_path=path.resolve(), filename=str(vid_path.absolute()).replace('vtt','mp4'))
             with vid_path.open(mode='w') as subs_file:
                 subs_file.write(yt.captions['es-419'].generate_srt_captions())
 
