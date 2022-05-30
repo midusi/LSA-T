@@ -1,25 +1,11 @@
-import unicodedata, re
 from pathlib import Path
-from pytube import Playlist, YouTube
+from pytube import Playlist
 from pytube.cli import on_progress
 
-def slugify(value, allow_unicode=False):
-    """
-    Taken from https://github.com/django/django/blob/master/django/utils/text.py
-    Convert to ASCII if 'allow_unicode' is False. Convert spaces or repeated
-    dashes to single dashes. Remove characters that aren't alphanumerics,
-    underscores, or hyphens. Convert to lowercase. Also strip leading and
-    trailing whitespace, dashes, and underscores.
-    """
-    value = str(value)
-    if allow_unicode:
-        value = unicodedata.normalize('NFKC', value)
-    else:
-        value = unicodedata.normalize('NFKD', value).encode('ascii', 'ignore').decode('ascii')
-    value = re.sub(r'[^\w\s-]', '', value.lower())
-    return re.sub(r'[-\s]+', '-', value).strip('-_')
+from helpers.slugify import slugify
 
 def main():
+    'Downloads videos and subtitles into raw folder.'
     # Playlists de resumen semanal, ecologia, ultimo momento y #leyfederalLSA
     playlists = {
         'resumen_semanal': "https://www.youtube.com/playlist?list=PLhysX0rYXWV2xM3T4KAqaAEg-GEhDXwai",

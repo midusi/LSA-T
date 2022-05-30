@@ -1,33 +1,10 @@
-import json, argparse
+import json
+import argparse
 from pathlib import Path
 from math import sqrt
-from typing import TypedDict
 
-
-class Box(TypedDict):
-    x1: float
-    y1: float
-    width: float
-    height: float
-
-class KeypointData(TypedDict):
-    image_id: str
-    category_id: int
-    keypoints: list[float]
-    score: float
-    box: list[float]
-    idx: list[float]
-
-def get_cut_paths(cut: Path) -> dict[str, Path]:
-    'Return paths for al the files (if exists) corresponding to a single clip'
-    name = cut.name[:-4]
-    return {
-        'mp4': cut,
-        'json': cut.parent / f"{name}.json",
-        'signer': cut.parent / f"{name}_signer.json",
-        'ap': cut.parent / f"{name}_ap.json",
-        'ap_raw': cut.parent / {name} / "alphapose-results.json",
-    }
+from type_hints import Box, KeypointData
+from helpers.get_cut_paths import get_cut_paths
 
 def format_box(box: list[float]) -> Box:
     'Creates box from list of strings'
@@ -67,24 +44,25 @@ def get_box(signer: list[KeypointData]) -> Box:
     return box
 
 def relative_pos(box: Box, x: float, y: float) -> tuple[float, float]:
-    'Returns relative position of a keypoint respect to the signers box center'
+    'Returns relative position of a keypoint respect to a point'
     center_x = box['x1'] + box['width']/2
     center_y = box['y1'] + box['height']/2
     return (center_x - x, center_y - y)
 
 def main():
+    'Infers, in case that there is many people detected by AlphaPose in one clip, which one is the signer. Result is stored in clip_signer.json'
     parser = argparse.ArgumentParser(description='''Infers, in case that there is many people detected by AlphaPose in one clip, which one is the signer.''')
     parser.add_argument('--rerun', '-r', help='runs it over all files, even those already processed', action='store_true')
     must_rerun: bool = parser.parse_args().rerun
 
-    path = Path("../data/cuts/")
+    path = Path("data/cuts/")
     cuts = map(get_cut_paths, path.glob('**/*.mp4'))
 
     cuts = list(filter(lambda c: c['ap'].exists() if must_rerun else c['ap_raw'].exists(), cuts))
 
     # Identify signers
-    for idx, cut in enumerate(cuts):
-        print(f"{idx + 1}/{len(cuts)}: {cut}")
+    for i_cut, cut in enumerate(cuts):
+        print(f"{i_cut + 1}/{len(cuts)}: {cut['mp4']}")
 
         ap_path = cut['ap'] if must_rerun else cut['ap_raw']
         with ap_path.open() as ap_file:
@@ -100,15 +78,15 @@ def main():
                 'c': [[] for _ in range(136)]
             })
             for keydata in s:
-                for idx, keypoint in enumerate(keydata["keypoints"]):
-                    if idx % 3 == 0:
-                        keypoints_for_signers[-1]['x'][int(idx/3)].append(keypoint)
-                    if idx % 3 == 1:
-                        keypoints_for_signers[-1]['y'][int(idx/3)].append(keypoint)
-                    if idx % 3 == 2:
-                        keypoints_for_signers[-1]['c'][int(idx/3)].append(keypoint)
+                for i_keyp, keypoint in enumerate(keydata["keypoints"]):
+                    if i_keyp % 3 == 0:
+                        keypoints_for_signers[-1]['x'][int(i_keyp/3)].append(keypoint)
+                    if i_keyp % 3 == 1:
+                        keypoints_for_signers[-1]['y'][int(i_keyp/3)].append(keypoint)
+                    if i_keyp % 3 == 2:
+                        keypoints_for_signers[-1]['c'][int(i_keyp/3)].append(keypoint)
 
-        scores = []
+        scores: list[float] = []
         # movement is calculated from frame i to frame i+step
         step = 5
         for i_signer, each in enumerate(keypoints_for_signers):
@@ -126,7 +104,7 @@ def main():
                         rel_x2, rel_y2 = relative_pos(format_box(box2), xs[i_frame + step], ys[i_frame + step])
                         distance += sqrt((rel_x1 - rel_x2)**2 + (rel_y1 - rel_y2)**2)
             # movement is normalized respect to the amount of frames
-            scores.append(distance / len(cs))
+            scores.append(distance / ((len(each['c'][0])) / step))
 
         signer = signers[scores.index(max(scores))]
 
@@ -136,7 +114,7 @@ def main():
                 "roi": get_box(signer),
                 "keypoints": signer
             }, signer_file, indent=4)
-        
+
         if not must_rerun:
             with cut['ap'].open(mode='w') as ap_file:
                 json.dump(ap, ap_file)

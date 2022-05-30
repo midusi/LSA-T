@@ -8,3 +8,4 @@ AlphaPose
 data
 raw
 test
+__pycache__

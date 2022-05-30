@@ -47,7 +47,7 @@ def draw_rectangle(box):
         return fr
     return draw
 
-def draw_keypoints(keypoints, fps, size = 5, threshold = 0):
+def draw_keypoints(keypoints, fps, size = 5, threshold: float = 0):
     def draw(get_frame, t):
         '''Draw keypoints in the frame'''
         fr = get_frame(t).copy()
@@ -74,6 +74,7 @@ def group_kds(kds: list[KeypointData]) -> list[list[KeypointData]]:
 
 
 def main():
+    'Generates a lightweight database with videos in lower quality that has keipoints and roi embebbed on them.'
     source = Path('./data/cuts')
     out = Path('./data/cuts_visualization')
     out.mkdir(exist_ok=True,parents=True)
