@@ -1,6 +1,6 @@
-# cn_sordos_db
+# LSA-T dataset
 
-Code used to generate [pensar nombre] dataset from public videos found in [CN Sordos](https://www.youtube.com/c/CNSORDOSARGENTINA/playlists) channel.
+Code used to generate LSA-T dataset from public videos found in [CN Sordos](https://www.youtube.com/c/CNSORDOSARGENTINA/playlists) channel.
 
 ## Scripts
 
