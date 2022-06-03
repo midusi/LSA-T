@@ -23,7 +23,6 @@ def store_sample(clip_file: Path, dataset):
     dataset.add_sample(sample)
 
 def store_full_sample(clip_file: Path, dataset):
-    print(clip_file)
     sample = Sample(clip_file)
     with Path(str(clip_file.resolve())[:-3] + "json").open() as sample_data_file:
         sample_data = json.load(sample_data_file)
@@ -59,7 +58,7 @@ def main():
     full_db: bool = parser.parse_args().full
     reload_db: bool = parser.parse_args().reload
 
-    db_name = "cn_sordos" if full_db else "cn_sordos_vis"
+    db_name = "lsa-t" if full_db else "lsa-t_vis"
     path = Path("./data/cuts") if full_db else Path("./data/cuts_visualization")
     try:
         dataset = fo.load_dataset(db_name)

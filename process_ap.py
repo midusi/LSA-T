@@ -5,6 +5,8 @@ from math import sqrt
 
 from type_hints import Box, KeypointData
 from helpers.get_cut_paths import get_cut_paths
+from helpers.group_kds import group_kds
+
 
 def format_box(box: list[float]) -> Box:
     'Creates box from list of strings'
@@ -14,19 +16,6 @@ def format_box(box: list[float]) -> Box:
         'width': box[2],
         'height': box[3]
     }
-
-def group_kds(kds: list[KeypointData]) -> list[list[KeypointData]]:
-    'Groups keypoint data objects that belong to same frame'
-    grouped: list[list[KeypointData]] = [[]]
-    for kd in kds:
-        added = False
-        for g in grouped:
-            if not added and (not g or g[-1]['image_id'] != kd['image_id']):
-                g.append(kd)
-                added = True
-        if not added:
-            grouped.append([kd])
-    return grouped
 
 def get_box(signer: list[KeypointData]) -> Box:
     'Get box of signer alongside the entire clip'

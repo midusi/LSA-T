@@ -1,39 +1,16 @@
 import json
 from pathlib import Path
 from moviepy.editor import VideoFileClip
-from typing import TypedDict
+from typing import Callable
+from numpy.typing import ArrayLike
+
+from helpers.get_cut_paths import get_cut_paths
+from helpers.group_kds import group_kds
+from type_hints import KeypointData, SignerData, Box
 
 
-class KeypointData(TypedDict):
-    image_id: str
-    category_id: int
-    keypoints: list[float]
-    score: float
-    box: list[float]
-    idx: list[float]
-
-class Box(TypedDict):
-    x1: float
-    y1: float
-    width: float
-    height: float
-
-class SignerData(TypedDict):
-    scores: list[float]
-    roi: Box
-    keypoints: list[KeypointData]
-
-
-def get_cut_files(cut: Path) -> dict[str, Path]:
-    return {
-        'mp4': cut,
-        'json': cut.parent / f"{cut.name[:-4]}.json",
-        'signer': cut.parent / f"{cut.name[:-4]}_signer.json",
-        'ap': cut.parent / f"{cut.name[:-4]}_ap.json"
-    }
-
-def draw_rectangle(box):
-    def draw(frame):
+def draw_rectangle(box: Box) -> Callable[[ArrayLike], ArrayLike]:
+    def draw(frame: ArrayLike) -> ArrayLike:
         '''Draw a rectangle in the frame'''
         fr = frame.copy()
         bottom = int(box['y1'])
@@ -47,8 +24,12 @@ def draw_rectangle(box):
         return fr
     return draw
 
-def draw_keypoints(keypoints, fps, size = 5, threshold: float = 0):
-    def draw(get_frame, t):
+def draw_keypoints(
+        keypoints: list[KeypointData],
+        fps: float,
+        size: int = 5,
+        threshold: float = 0) -> Callable[[Callable[[float], ArrayLike], float], ArrayLike]:
+    def draw(get_frame: Callable[[float], ArrayLike], t: float) -> ArrayLike:
         '''Draw keypoints in the frame'''
         fr = get_frame(t).copy()
         keypoints_t: list[float] = keypoints[min(int(t * fps), len(keypoints)-1)]['keypoints']
@@ -59,21 +40,7 @@ def draw_keypoints(keypoints, fps, size = 5, threshold: float = 0):
         return fr
     return draw
 
-def group_kds(kds: list[KeypointData]) -> list[list[KeypointData]]:
-    '''Groups keypoint data objects that belong to same frame'''
-    grouped: list[list[KeypointData]] = [[]]
-    for kd in kds:
-        added = False
-        for g in grouped:
-            if not added and (not g or g[-1]['image_id'] != kd['image_id']):
-                g.append(kd)
-                added = True
-        if not added:
-            grouped.append([kd])
-    return grouped
-
-
-def main():
+def gen_vis_db():
     'Generates a lightweight database with videos in lower quality that has keipoints and roi embebbed on them.'
     source = Path('./data/cuts')
     out = Path('./data/cuts_visualization')
@@ -83,7 +50,7 @@ def main():
         print(f"Video {i}")
         outpath = out / cut.parent.name
         outpath.mkdir(exist_ok=True,parents=True)
-        clip_files = get_cut_files(cut)
+        clip_files = get_cut_paths(cut)
         out_clip = VideoFileClip(str(clip_files['mp4']))
         with clip_files['signer'].open() as signerf:
             signer: SignerData = json.load(signerf)
@@ -104,4 +71,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    gen_vis_db()

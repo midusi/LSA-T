@@ -6,7 +6,7 @@ from helpers.get_cut_paths import get_cut_paths
 from type_hints import SignerData
 
 
-def main():
+def gen_cuts_only_db():
     'Generates a database in data/cuts_only that contains only the videos and metadata (excluding keypoint info)'
     source = Path('./data/cuts')
     out = Path('./data/cuts_only')
@@ -29,4 +29,4 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    gen_cuts_only_db()

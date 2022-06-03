@@ -1,12 +1,7 @@
 from typing import TypedDict
 
+from Box import Box
 
-class Box(TypedDict):
-    'Standard box data format for ROI'
-    x1: float
-    y1: float
-    width: float
-    height: float
 
 class KeypointData(TypedDict):
     'Data format for each fram of the AlphaPose output'
