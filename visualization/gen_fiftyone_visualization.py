@@ -1,14 +1,11 @@
+import argparse, json, sys
 import fiftyone as fo
-import argparse, json
 from pathlib import Path
 from fiftyone import Sample
 
+sys.path.append("/mnt/data/datasets/cn_sordos_db")
+from helpers.get_score import get_score
 
-def get_score(scores):
-    m1 = max(scores)
-    scores = scores.copy()
-    scores.remove(m1)
-    return 0 if m1 == 0 else (m1 - max(scores)) / m1
 
 def store_sample(clip_file: Path, dataset):
     sample = Sample(clip_file)
@@ -51,7 +48,7 @@ def store_full_sample(clip_file: Path, dataset):
             for i in range(93, len(keydata["keypoints"]), 3) if keydata["keypoints"][i+2] > 0.5])
     dataset.add_sample(sample)
 
-def main():
+def gen_fiftyone_visualization():
     parser = argparse.ArgumentParser(description='''Generates DB able to visualize clips on fiftyone and starts fiftyone.''')
     parser.add_argument('--full', '-f', help='loads the full database (hd videos and uses live keypoints and roi data', action='store_true')
     parser.add_argument('--reload', '-r', help='reloads the database', action='store_true')
@@ -81,4 +78,4 @@ def main():
     sess.wait()
 
 if __name__ == "__main__":
-    main()
+    gen_fiftyone_visualization()
