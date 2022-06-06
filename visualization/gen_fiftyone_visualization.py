@@ -3,7 +3,7 @@ import fiftyone as fo
 from pathlib import Path
 from fiftyone import Sample
 
-sys.path.append("/mnt/data/datasets/cn_sordos_db")
+sys.path.append("/mnt/data/datasets/LSA-T")
 from helpers.get_score import get_score
 
 
