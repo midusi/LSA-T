@@ -6,5 +6,6 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 - [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
 - [GitHub Repository](https://github.com/midusi/LSA-T)
 
-![My helpful screenshot](/assets/100.mp4)
-![My helpful screenshot](/assets/screenshot_cn_sordos_ecologia.png)
+|                                               |                                               |                                               |                                               |
+|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| <img width="100%" src="assets/clip2.gif"> | <img width="100%" src="assets/clip3.gif"> | <img width="100%" src="assets/clip1.gif"> | <img width="100%" src="assets/clip4.gif"> |
