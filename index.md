@@ -1,7 +1,9 @@
 ## LSA-T: The first continuous LSA dataset
 
-You can use the [editor on GitHub](https://github.com/midusi/LSA-T/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains 14,880 sentence level videos of LSA extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with labels and keypoints annotations for each signer. Videos are in 30 FPS full HD (1920x1080).
 
-[LSA-T](http://c1781468.ferozo.com/data/lsa-t.7z)
+- [Download link](http://c1781468.ferozo.com/data/lsa-t.7z) (45GB compressed)
+- [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
+- [GitHub Repository](https://github.com/midusi/LSA-T)
 
-[Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
+
