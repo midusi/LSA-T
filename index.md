@@ -116,6 +116,10 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
     </tr>
 </table>
 
+### Format
+
+**TO-DO**
+
 ### Citation
 
 **TO-DO**
