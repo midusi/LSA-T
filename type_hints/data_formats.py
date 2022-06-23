@@ -4,7 +4,7 @@ from .Box import Box
 
 
 class KeypointData(TypedDict):
-    'Data format for each fram of the AlphaPose output'
+    '''Data format for each frame of the AlphaPose output'''
     image_id: str
     category_id: int
     keypoints: list[float]
@@ -13,13 +13,13 @@ class KeypointData(TypedDict):
     idx: list[float]
 
 class SignerData(TypedDict):
-    'Data format for generated signer data file'
+    '''Data format for generated signer data file'''
     scores: list[float]
     roi: Box
     keypoints: list[KeypointData]
 
 class CutData(TypedDict):
-    '''type of the cuts json data file'''
+    '''Data format of the cuts json data file'''
     label: str
     start: float
     end: float
