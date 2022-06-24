@@ -100,9 +100,6 @@ class LSA_Dataset(Dataset):
     def __iter__(self) -> Iterator[Sample]:
         for i in range(self.__len__()):
             yield self.__getitem__(i)
-    
-    def tokenize(self, label: str) -> list[str]:
-        return self.tokenizer(label)
 
     def get_token_idx(self, token: str) -> int:
         return self.vocab.__getitem__(token)
