@@ -2,13 +2,30 @@
 
 LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains 14,880 sentence level videos of LSA extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with labels and keypoints annotations for each signer. Videos are in 30 FPS full HD (1920x1080).
 
-- [Download link](http://c1781468.ferozo.com/data/lsa-t.7z) (45GB compressed)
-- [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
-- Presentation paper (**TO-DO**)
+* [Download link](http://c1781468.ferozo.com/data/lsa-t.7z) (45GB compressed)
+* [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
+* Presentation paper (**TO-DO**)
 
 |                                               |                                               |                                               |
 |-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
 | <img width="100%" src="assets/clip2.gif"> | <img width="100%" src="assets/clip3.gif"> | <img width="100%" src="assets/clip1.gif"> |
+
+### Format
+
+Samples are organized in directories according to the playlists and video they belong to. For each sample ```i``` there are four files:
+
+* ``i.mp4`` the clip corresponding to the ith line of subtitles.
+* ``i.json`` contains:
+    * **label**: the line of subtitles corresponding to the clip.
+    * **start**: time in seconds where the subtitle starts.
+    * **end**: time in seconds where the subtitle ends.
+    * **video**: title of the video which the clip belongs to.
+    * **playlist**: title of the playlist which the clip belongs to.
+* ``i_ap.json`` the raw AlphaPose results for the **i**th clip using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
+* ``data/V/i_signer.json`` contains:
+    * **scores**: for each person in the clip, the amount of "movement" in its hands. It is used to infer who is the signer.
+    * **roi**: the considered region of interest of the clip (bounding box of the infered signer).
+    * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``i_ap.json``.
 
 ### Statistics and comparison with other DBs
 
@@ -38,9 +55,9 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 <table>
     <tr>
         <td></td>
-        <td>LSA-T</td>
-        <td colspan=2>Full version</td>
-        <td colspan=2>Reduced version</td>
+        <td><b>LSA-T</td>
+        <td colspan=2><b>Full version</td>
+        <td colspan=2><b>Reduced version</td>
     </tr>
     <tr>
         <td></td>
@@ -51,7 +68,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
         <td>Test</td>
     </tr>
     <tr>
-        <td>%signers</td>
+        <td><b>signers</td>
         <td>103</td>
         <td>X</td>
         <td>X</td>
@@ -59,7 +76,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
         <td>X</td>
     </tr>
     <tr>
-        <td>%duration [h]</td>
+        <td><b>duration [h]</td>
         <td>21.78</td>
         <td>17.49</td>
         <td>4.29</td>
@@ -67,7 +84,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
         <td>3.89</td>
     </tr>
     <tr>
-        <td>\# sentences</td>
+        <td><b># sentences</td>
         <td>14,880</td>
         <td>11,065</td>
         <td>2735</td>
@@ -75,15 +92,15 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
         <td>910</td>
     </tr>
     <tr>
-        <td>\% unique sentences</td>
-        <td>95.79\%</td>
-        <td>96.64\%</td>
-        <td>92.78\%</td>
-        <td>96.88\%</td>
-        <td>98.35\%</td>
+        <td><b>% unique sentences</td>
+        <td>95.79%</td>
+        <td>96.64%</td>
+        <td>92.78%</td>
+        <td>96.88%</td>
+        <td>98.35%</td>
     </tr>
     <tr>
-        <td>vocab. size</td>
+        <td><b>vocab. size</td>
         <td>14,239</td>
         <td>12,385</td>
         <td>5546</td>
@@ -91,34 +108,30 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
         <td>1579</td>
     </tr>
     <tr>
-        <td>\% singletons</td>
-        <td>50.21\%</td>
-        <td>52.01\%</td>
-        <td>61.9\%</td>
-        <td>23.2\%</td>
-        <td>48.83\%</td>
+        <td><b>% singletons</td>
+        <td>50.21%</td>
+        <td>52.01%</td>
+        <td>61.9%</td>
+        <td>23.2%</td>
+        <td>48.83%</td>
     </tr>
     <tr>
-        <td>\% sentences with singletons</td>
-        <td>34.97\%</td>
-        <td>40.98\%</td>
-        <td>67.97\%</td>
-        <td>14.36\%</td>
-        <td>54.29\%</td>
+        <td><b>% sentences with singletons</td>
+        <td>34.97%</td>
+        <td>40.98%</td>
+        <td>67.97%</td>
+        <td>14.36%</td>
+        <td>54.29%</td>
     </tr>
     <tr>
-        <td>\% sentences with words not in train vocabulary</td>
+        <td><b>% sentences with words not in train vocabulary</td>
         <td>-</td>
         <td>-</td>
-        <td>59.2\%</td>
+        <td>59.2%</td>
         <td>-</td>
-        <td>84.5\%</td>
+        <td>84.5%</td>
     </tr>
 </table>
-
-### Format
-
-**TO-DO**
 
 ### Citation
 
