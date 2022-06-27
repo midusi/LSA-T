@@ -1,36 +1,138 @@
-# LSA-T dataset
+## LSA-T: The first continuous LSA dataset
 
-Code used to generate LSA-T dataset from public videos found in [CN Sordos](https://www.youtube.com/c/CNSORDOSARGENTINA/playlists) channel.
+LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains 14,880 sentence level videos of LSA extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with labels and keypoints annotations for each signer. Videos are in 30 FPS full HD (1920x1080).
 
-## Scripts
+* [Download link](http://c1781468.ferozo.com/data/lsa-t.7z) (45GB compressed)
+* [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
+* Presentation paper (**TO-DO**)
 
-* ``download.py`` downloads said videos and subtitles into ``raw`` folder.
-* ``gen_clips.py`` parses subtitles files (``.vtt``) and generates, for each of the **i** lines of subtitles of the **V** videos:
-  * ``data/V/i.mp4`` the clip corresponding to the **i**th line of subtitles.
-  * ``data/V/i.json`` that contains:
+|                                               |                                               |                                               |
+|-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
+| <img width="100%" src="assets/clip2.gif"> | <img width="100%" src="assets/clip3.gif"> | <img width="100%" src="assets/clip1.gif"> |
+
+### Format
+
+Samples are organized in directories according to the playlists and video they belong to. For each sample ```i``` there are four files:
+
+* ``i.mp4`` the clip corresponding to the ith line of subtitles.
+* ``i.json`` contains:
     * **label**: the line of subtitles corresponding to the clip.
     * **start**: time in seconds where the subtitle starts.
     * **end**: time in seconds where the subtitle ends.
-    * **video**: title of the video **V** which the clip belongs to.
-  * Parameter ``-d`` (or ``--delete``) deletes both video and subtitle file after processing.
-* ``run_ap.sh`` takes as input the path where AlphaPose is installed and runs AlphaPose over all of the generated clips. Output for each **i**th clip is stored in ``data/V/i/alphapose_results.json``
-* ``process_ap.py`` infers, in case that there is many people detected by AlphaPose in one clip, which one is the signer. It generates, for each **i**th clip:
-  * ``data/V/i_ap.json`` with the raw AlphaPose results for the **i**th video using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
-  * ``data/V/i_signer.json`` that contains:
+    * **video**: title of the video which the clip belongs to.
+    * **playlist**: title of the playlist which the clip belongs to.
+* ``i_ap.json`` the raw AlphaPose results for the **i**th clip using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
+* ``data/V/i_signer.json`` contains:
     * **scores**: for each person in the clip, the amount of "movement" in its hands. It is used to infer who is the signer.
-    * **roi**: the considered region of interest of the clip, meaning the box corresponding to the infered signer of the clip.
-    * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``data/V/i_ap.json``.
-  * By default it only runs over the videos that haven't been processed yet (there is ``data/V/i/alphapose_results.json`` file, that is deleted after processing and it's content stored in ``data/V/i_ap.json``). Parameter ``-r`` (or ``--rerun``) runs it over already processed files.
-* ``gen_extra_dbs`` contains scripts for the generation of extra versions of the database:
-  * ``gen_cuts_only_db.py`` generate a database in ``data/cuts_only`` that contains only the videos and metadata (excluding keypoint info)
-  * ``gen_vis_db.py`` generates a lightweight version of the database with videos in lower quality and that have the keipoints and roi embebbed on them. It is used for visualization.
+    * **roi**: the considered region of interest of the clip (bounding box of the infered signer).
+    * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``i_ap.json``.
 
+### Statistics and comparison with other DBs
 
-## Visualization
+| ****                    | **LSA-T**          | **PHOENIX***     | **SIGNUM**      | **CSL**            | **GSL**     | **KETI**           |
+|-------------------------|--------------------|------------------|-----------------|--------------------|-------------|--------------------|
+| **language**            | Spanish            | German           | German          | Chinese            | Greek       | Korean             |
+| **sign language**       | LSA                | GSL              | GSL             | CSL                | GSL         | KLS                |
+| **real life**           | **Yes**            | **Yes**          | No              | No                 | No          | No                 |
+| **signers**             | **103**            | 9                | 25              | 50                 | 7           | 14                 |
+| **duration (h)**        | 21.78              | 10.71            | 55.3            | **100+**           | 9.51        | 28                 |
+| **# samples**           | 14,880             | 7096             | **33,210**      | 25,000             | 10,295      | 14,672             |
+| **# unique sentences**  | **14,254**         | 5672             | 780             | 100                | 331         | 105                |
+| **% unique sentences**  | **95.79%**         | 79.93%           | 2.35%           | 0.4%               | 3.21%       | 0.71%              |
+| **vocab. size (w)**     | **14,239**         | 2887             | N/A             | 178                | N/A         | 419                |
+| **# singletons (w)**    | **7150**           | 1077             | 0               | 0                  | 0           | 0                  |
+| **% singletons (w)**    | **50.21%**         | 37.3%            | 0%              | 0%                 | 0%          | 0%                 |
+| **vocab. size (gl)**    | -                  | **1066**         | 450             | -                  | 310         | 524                |
+| **# singletons (gl)**   | -                  | **337**          | 0               | -                  | 0           | 0                  |
+| **# singletons (gl)**   | -                  | **31.61%**       | 0%              | -                  | 0%          | 0%                 |
+| **resolution**          | **1920x1080**      | 210x260          | 776x578         | **1920x1080**      | 848x480     | **1920x1080**      |
+| **fps**                 | **30**             | 25               | **30**          | **30**             | **30**      | **30**             |
 
-Stored in ``visualization`` show visualizations and statistics about the database content. They do not take part in the database generation and processing.
+\*Data was not available for the whole PHOENIX dataset, so the table show its train set statistics.
 
-* ``subtitles_analysis.ipynb`` shows statistics about the clips duration, words per clip, most used words and n-grams.
-* ``signers_analysis.ipynb`` shows statistics about amount of people per clip and confidence about the one chosed as signer.
-* ``fiftyone_visualization.py`` starts a [FiftyOne](https://voxel51.com/docs/fiftyone/) sessions and loads the database for visualization. First time might take a while to build the dataset in the correct format.
-  * Parameter ``--full`` or ``-f`` is used to load the ful version of the dataset (with HQ videos and keypoint and roi live data). This may need a lot of memory.
+### Evaluation splits
+
+<table>
+    <tr>
+        <td></td>
+        <td><b>LSA-T</td>
+        <td colspan=2><b>Full version</td>
+        <td colspan=2><b>Reduced version</td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td>Train</td>
+        <td>Test</td>
+        <td>Train</td>
+        <td>Test</td>
+    </tr>
+    <tr>
+        <td><b>signers</td>
+        <td>103</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+        <td>X</td>
+    </tr>
+    <tr>
+        <td><b>duration [h]</td>
+        <td>21.78</td>
+        <td>17.49</td>
+        <td>4.29</td>
+        <td>15.85</td>
+        <td>3.89</td>
+    </tr>
+    <tr>
+        <td><b># sentences</td>
+        <td>14,880</td>
+        <td>11,065</td>
+        <td>2735</td>
+        <td>3767</td>
+        <td>910</td>
+    </tr>
+    <tr>
+        <td><b>% unique sentences</td>
+        <td>95.79%</td>
+        <td>96.64%</td>
+        <td>92.78%</td>
+        <td>96.88%</td>
+        <td>98.35%</td>
+    </tr>
+    <tr>
+        <td><b>vocab. size</td>
+        <td>14,239</td>
+        <td>12,385</td>
+        <td>5546</td>
+        <td>2694</td>
+        <td>1579</td>
+    </tr>
+    <tr>
+        <td><b>% singletons</td>
+        <td>50.21%</td>
+        <td>52.01%</td>
+        <td>61.9%</td>
+        <td>23.2%</td>
+        <td>48.83%</td>
+    </tr>
+    <tr>
+        <td><b>% sentences with singletons</td>
+        <td>34.97%</td>
+        <td>40.98%</td>
+        <td>67.97%</td>
+        <td>14.36%</td>
+        <td>54.29%</td>
+    </tr>
+    <tr>
+        <td><b>% sentences with words not in train vocabulary</td>
+        <td>-</td>
+        <td>-</td>
+        <td>59.2%</td>
+        <td>-</td>
+        <td>84.5%</td>
+    </tr>
+</table>
+
+### Citation
+
+**TO-DO**
