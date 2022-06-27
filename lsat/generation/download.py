@@ -2,7 +2,7 @@ from pathlib import Path
 from pytube import Playlist
 from pytube.cli import on_progress
 
-from helpers.slugify import slugify
+from lsat.helpers.slugify import slugify
 
 def main():
     'Downloads videos and subtitles into raw folder.'

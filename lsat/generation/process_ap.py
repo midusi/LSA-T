@@ -3,9 +3,9 @@ import argparse
 from pathlib import Path
 from math import sqrt
 
-from type_hints import Box, KeypointData
-from helpers.get_cut_paths import get_cut_paths
-from helpers.group_kds import group_kds
+from lsat.typing import Box, KeypointData
+from lsat.helpers.get_cut_paths import get_cut_paths
+from lsat.helpers.group_kds import group_kds
 
 
 def format_box(box: list[float]) -> Box:

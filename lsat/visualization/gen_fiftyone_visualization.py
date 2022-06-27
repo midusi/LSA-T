@@ -1,10 +1,9 @@
-import argparse, json, sys
+import argparse, json
 import fiftyone as fo
 from pathlib import Path
 from fiftyone import Sample
 
-sys.path.append("/mnt/data/datasets/LSA-T")
-from helpers.get_score import get_score
+from lsat.helpers.get_score import get_score
 
 
 def store_sample(clip_file: Path, dataset):

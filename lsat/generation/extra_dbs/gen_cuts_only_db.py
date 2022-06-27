@@ -2,8 +2,8 @@ import json
 from pathlib import Path
 from shutil import copyfile
 
-from helpers.get_cut_paths import get_cut_paths
-from type_hints import SignerData
+from lsat.helpers.get_cut_paths import get_cut_paths
+from lsat.typing import SignerData
 
 
 def gen_cuts_only_db():

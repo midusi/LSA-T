@@ -4,9 +4,10 @@ from typing import Callable
 
 from torchtext.vocab import Vocab
 
-from type_hints import CutData
-from helpers.get_cut_paths import get_cut_paths
-from helpers.get_score import get_score
+from lsat.typing import CutData
+from lsat.helpers.get_cut_paths import get_cut_paths
+from lsat.helpers.get_score import get_score
+
 
 def sample_contains_oov(data_path: Path, vocab: Vocab, tokenizer: Callable[[str], list[str]]) -> bool:
     with open(data_path) as data_file:

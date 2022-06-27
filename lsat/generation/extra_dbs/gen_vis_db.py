@@ -4,9 +4,9 @@ from moviepy.editor import VideoFileClip
 from typing import Callable
 from numpy.typing import ArrayLike
 
-from helpers.get_cut_paths import get_cut_paths
-from helpers.group_kds import group_kds
-from type_hints import KeypointData, SignerData, Box
+from lsat.helpers.get_cut_paths import get_cut_paths
+from lsat.helpers.group_kds import group_kds
+from lsat.typing import KeypointData, SignerData, Box
 
 
 def draw_rectangle(box: Box) -> Callable[[ArrayLike], ArrayLike]:

@@ -1,6 +1,6 @@
 from typing import TypedDict
 
-from .Box import Box
+from lsat.typing.Box import Box
 
 
 class KeypointData(TypedDict):

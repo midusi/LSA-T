@@ -6,7 +6,7 @@ from torch import Tensor, stack
 from torchvision.transforms.functional import crop, resize
 from torchtext.vocab import Vocab
 
-from type_hints import Box, KeypointData
+from lsat.typing import Box, KeypointData
 
 T = TypeVar('T')
 def get_frames_reduction_transform(max_frames: int) -> Callable[[list[T]], list[T]]:
@@ -22,21 +22,25 @@ def get_frames_reduction_transform(max_frames: int) -> Callable[[list[T]], list[
         return frames
     return frames_reduction_transform
 
-def get_roi_selector_transform(height: int, width: int) -> Callable[[Tensor, Box], Tensor]:
+def _frame_roi_selector_transform(img: Tensor, roi: Box, height: int, width: int) -> Tensor:
+    '''Frame-level transform that crops a given roi from the frame and resizes it to to the desired values keeping the aspect ratio and padding with zeros if necessary'''
+    img = crop(img, int(roi['y1']),int(roi['x1']),int(roi['height']),int(roi['width']))
+    pad = torch.zeros(3, height, width, dtype=torch.uint8)
+    if (roi['height'] - height) > (roi['width'] - width):
+        new_width = int(roi['width']*height/roi['height'])
+        img = resize(img, [height, new_width])
+        pad[:, :, int((width - new_width)/2):-int((width - new_width)/2) - (1 if (width - new_width) % 2 == 1 else 0)] = img
+    else:
+        new_height = int(roi['height']*width/roi['width'])
+        img = resize(img, [new_height, width])
+        pad[:, int((height - new_height)/2):-int((height - new_height)/2) - (1 if (height - new_height) % 2 == 1 else 0), :] = img
+    return pad
+
+def get_roi_selector_transform(height: int, width: int, rois: list[Box]) -> Callable[[Tensor], Tensor]:
     '''Given height and width, returns a frame-level roi selector transform'''
-    def roi_selector_transform(img: Tensor, box: Box) -> Tensor:
-        '''Frame-level transform that crops a given roi from the frame and resizes it to to the desired values keeping the aspect ratio and padding with zeros if necessary'''
-        img = crop(img, int(box['y1']),int(box['x1']),int(box['height']),int(box['width']))
-        pad = torch.zeros(3, height, width, dtype=torch.uint8)
-        if (box['height'] - height) > (box['width'] - width):
-            new_width = int(box['width']*height/box['height'])
-            img = resize(img, [height, new_width])
-            pad[:, :, int((width - new_width)/2):-int((width - new_width)/2) - (1 if (width - new_width) % 2 == 1 else 0)] = img
-        else:
-            new_height = int(box['height']*width/box['width'])
-            img = resize(img, [new_height, width])
-            pad[:, int((height - new_height)/2):-int((height - new_height)/2) - (1 if (height - new_height) % 2 == 1 else 0), :] = img
-        return pad
+    def roi_selector_transform(frames: Tensor) -> Tensor:
+        cropped_frames = [_frame_roi_selector_transform(frame, roi, height, width) for (roi, frame) in zip(rois, frames)]
+        return stack(cropped_frames)
     return roi_selector_transform
 
 def get_keypoint_format_transform(keypoints_to_use: list[int]) -> Callable[[KeypointData], Tensor]:
@@ -56,7 +60,7 @@ def keypoints_norm_to_nose_transform(keypoints: Tensor) -> Tensor:
         [0]
     ]))
 
-def __get_interpolated_point__(i: int, points: list[tuple[float, float, float]], threshold: float, default: tuple[float, float] = (0,0)) -> tuple[float, float]:
+def _get_interpolated_point(i: int, points: list[tuple[float, float, float]], threshold: float, default: tuple[float, float] = (0,0)) -> tuple[float, float]:
     '''Returns for a point, if confidence lower than threshold, the interpolation of the next and previous point with confidence over threshold'''
     next_point = next(((point[0], point[1]) for point in points[(i+1):] if point[2] > threshold), None)
     prev_point = next(((point[0], point[1]) for point in reversed(points[:i]) if point[2] > threshold), None)
@@ -66,13 +70,13 @@ def __get_interpolated_point__(i: int, points: list[tuple[float, float, float]],
         )
     )
 
-def __interpolate_each__(keypoints: list[tuple[float, float, float]], threshold: float, max_missing_percent: float, default: Optional[tuple[float, float]] = None) -> Optional[list[tuple[float, float]]]:
+def _interpolate_each(keypoints: list[tuple[float, float, float]], threshold: float, max_missing_percent: float, default: Optional[tuple[float, float]] = None) -> Optional[list[tuple[float, float]]]:
     '''For a list of points, replaces those with confidence lower than threshold with the interpolation of the next and previous point with confidence over threshold'''
     # keypoints contains [x,y,z] for each frame 
     missing = sum(1 for point in keypoints if point[2] < threshold)
     if missing / len(keypoints) <= max_missing_percent:
         return [
-            (each[0], each[1]) if each[2] > threshold else __get_interpolated_point__(i, keypoints, threshold) for i, each in enumerate(keypoints)
+            (each[0], each[1]) if each[2] > threshold else _get_interpolated_point(i, keypoints, threshold) for i, each in enumerate(keypoints)
         ]
     return None if not default else [default for _ in keypoints]
 
@@ -80,7 +84,7 @@ def interpolate_keypoints_transform(keypoints: list[Tensor]) -> list[Tensor]:
     '''For a list of keypoint frames (each in format given by keypoint_format_transform), applies __interpolate_each__ to each frame'''
     # switch dims to keypoints, frames, (x,y,c)
     keypoints_trans = stack(keypoints).permute(2, 0, 1)
-    interpolated_keypoints = Tensor([__interpolate_each__(each.tolist(), 0.2, 0.7, (0, 0)) for each in keypoints_trans])
+    interpolated_keypoints = Tensor([_interpolate_each(each.tolist(), 0.2, 0.7, (0, 0)) for each in keypoints_trans])
     return [
         frame for frame in interpolated_keypoints.permute(1, 2, 0)
     ]

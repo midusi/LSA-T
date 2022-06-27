@@ -1,4 +1,4 @@
-from type_hints import KeypointData
+from lsat.typing import KeypointData
 
 
 def group_kds(kds: list[KeypointData]) -> list[list[KeypointData]]:
