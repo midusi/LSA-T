@@ -55,9 +55,9 @@ Samples are organized in directories according to the playlists and video they b
 <table>
     <tr>
         <td></td>
-        <td><b>LSA-T</td>
-        <td colspan=2><b>Full version</td>
-        <td colspan=2><b>Reduced version</td>
+        <td><b>LSA-T</b></td>
+        <td colspan=2><b>Full version</b></td>
+        <td colspan=2><b>Reduced version</b></td>
     </tr>
     <tr>
         <td></td>
@@ -68,7 +68,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>Test</td>
     </tr>
     <tr>
-        <td><b>signers</td>
+        <td><b>signers</b></td>
         <td>103</td>
         <td>X</td>
         <td>X</td>
@@ -76,7 +76,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>X</td>
     </tr>
     <tr>
-        <td><b>duration [h]</td>
+        <td><b>duration [h]</b></td>
         <td>21.78</td>
         <td>17.49</td>
         <td>4.29</td>
@@ -84,7 +84,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>3.89</td>
     </tr>
     <tr>
-        <td><b># sentences</td>
+        <td><b># sentences</b></td>
         <td>14,880</td>
         <td>11,065</td>
         <td>2735</td>
@@ -92,7 +92,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>910</td>
     </tr>
     <tr>
-        <td><b>% unique sentences</td>
+        <td><b>% unique sentences</b></td>
         <td>95.79%</td>
         <td>96.64%</td>
         <td>92.78%</td>
@@ -100,7 +100,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>98.35%</td>
     </tr>
     <tr>
-        <td><b>vocab. size</td>
+        <td><b>vocab. size</b></td>
         <td>14,239</td>
         <td>12,385</td>
         <td>5546</td>
@@ -108,7 +108,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>1579</td>
     </tr>
     <tr>
-        <td><b>% singletons</td>
+        <td><b>% singletons</b></td>
         <td>50.21%</td>
         <td>52.01%</td>
         <td>61.9%</td>
@@ -116,7 +116,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>48.83%</td>
     </tr>
     <tr>
-        <td><b>% sentences with singletons</td>
+        <td><b>% sentences with singletons</b></td>
         <td>34.97%</td>
         <td>40.98%</td>
         <td>67.97%</td>
@@ -124,7 +124,7 @@ Samples are organized in directories according to the playlists and video they b
         <td>54.29%</td>
     </tr>
     <tr>
-        <td><b>% sentences with words not in train vocabulary</td>
+        <td><b>% sentences with words not in train vocabulary</b></td>
         <td>-</td>
         <td>-</td>
         <td>59.2%</td>
