@@ -1,7 +1,0 @@
-README.md
-setup.py
-lsat/__init__.py
-lsat.egg-info/PKG-INFO
-lsat.egg-info/SOURCES.txt
-lsat.egg-info/dependency_links.txt
-lsat.egg-info/top_level.txt
