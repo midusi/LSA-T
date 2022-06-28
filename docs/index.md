@@ -29,7 +29,7 @@ Samples are organized in directories according to the playlists and video they b
 
 ### Statistics and comparison with other DBs
 
-| ****                    | **LSA-T**          | **PHOENIX***     | **SIGNUM**      | **CSL**            | **GSL**     | **KETI**           |
+|                     | **LSA-T**          | **PHOENIX***     | **SIGNUM**      | **CSL**            | **GSL**     | **KETI**           |
 |-------------------------|--------------------|------------------|-----------------|--------------------|-------------|--------------------|
 | **language**            | Spanish            | German           | German          | Chinese            | Greek       | Korean             |
 | **sign language**       | LSA                | GSL              | GSL             | CSL                | GSL         | KLS                |
