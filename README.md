@@ -14,15 +14,15 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 
 Samples are organized in directories according to the playlists and video they belong to. For each sample ```i``` there are four files:
 
-* ``i.mp4`` the clip corresponding to the ith line of subtitles.
+* ``i.mp4``: the clip corresponding to the ith line of subtitles.
 * ``i.json`` contains:
     * **label**: the line of subtitles corresponding to the clip.
     * **start**: time in seconds where the subtitle starts.
     * **end**: time in seconds where the subtitle ends.
     * **video**: title of the video which the clip belongs to.
     * **playlist**: title of the playlist which the clip belongs to.
-* ``i_ap.json`` the raw AlphaPose results for the **i**th clip using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
-* ``data/V/i_signer.json`` contains:
+* ``i_ap.json``: the raw AlphaPose results over the clip using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
+* ``i_signer.json`` contains:
     * **scores**: for each person in the clip, the amount of "movement" in its hands. It is used to infer who is the signer.
     * **roi**: the considered region of interest of the clip (bounding box of the infered signer).
     * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``i_ap.json``.
