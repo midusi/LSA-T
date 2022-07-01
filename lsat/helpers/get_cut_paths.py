@@ -2,7 +2,7 @@ from pathlib import Path
 
 def get_cut_paths(cut: Path) -> dict[str, Path]:
     'Return paths for al the files (if exists) corresponding to a single clip'
-    name = cut.name[:-4]
+    name = cut.name[:-5]
     return {
         'mp4': cut,
         'json': cut.parent / f"{name}.json",

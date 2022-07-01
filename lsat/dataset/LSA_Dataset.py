@@ -17,7 +17,7 @@ from lsat.typing import (
     KEYPOINTS_HINT,
     LABEL_HINT
 )
-from lsat.helpers.sample_filters import sample_contains_oov, sample_above_confidence_threshold
+from lsat.helpers.sample_filters import sample_above_confidence_threshold
 from lsat.helpers.get_cut_paths import get_cut_paths
 from lsat.helpers.train_test import split_train_test, load_train_test, store_samples_to_csv
 from lsat.helpers.ProgressBar import ProgressBar
@@ -59,39 +59,39 @@ class LSA_Dataset(Dataset):
         if not self.root.exists() or not any(self.root.iterdir()):
             self.root.mkdir(exist_ok=True, parents=True)
             pb = ProgressBar()
+            print("Downloading LSA-T")
             urlretrieve("http://c1781468.ferozo.com/data/lsa-t.7z", self.root / "lsat.7z", pb)
+            print("Extracting files, this may take a while")
             with py7zr.SevenZipFile(self.root / 'lsat.7z', mode='r') as z:
                 z.extractall(self.root)
             
-        splits_path = self.root.parent / "splits" / f"min_freq_{words_min_freq}_threshold_{str(signer_confidence_threshold).replace('.','')}"
+        splits_path = self.root.parent / "splits" / f"confidence_threshold_{str(signer_confidence_threshold).replace('.','')}"
         splits_path.mkdir(exist_ok=True, parents=True)
         train_path = splits_path / "train.csv"
         test_path = splits_path / "test.csv"
         sample_paths = map(lambda p: Path(str(p.resolve())[:-3] + "json"), self.root.glob('**/*.mp4'))
         
-        special_symbols = ['<unk>', '<pad>', '<bos>', '<eos>']
         self.tokenizer: Callable[[str], list[str]] = get_tokenizer('spacy', language='es_core_news_lg')
-        full_vocab = build_vocab_from_iterator(_yield_tokens(sample_paths, self.tokenizer),
-                                                            min_freq = words_min_freq,
-                                                            specials = special_symbols,
-                                                            special_first = True)
-        # by default returns <unk> index
-        full_vocab.set_default_index(0)
         
         if train_path.exists() and test_path.exists():
+            print("Loading existing train and test splits")
             self.train_samples, self.test_samples = load_train_test(train_path, test_path)
         else:
+            print("Generating train and test splits")
             self.train_samples, self.test_samples = split_train_test(self.root, lambda path:
-                (not sample_contains_oov(path, full_vocab, self.tokenizer))
-                and (sample_above_confidence_threshold(path, self.signer_confidence_threshold) if self.signer_confidence_threshold != 0 else True))
+                (sample_above_confidence_threshold(path, self.signer_confidence_threshold) if self.signer_confidence_threshold != 0 else True))
             store_samples_to_csv(train_path, self.train_samples)
             store_samples_to_csv(test_path, self.test_samples)
         self.max_label_len = max(map(len, _yield_tokens(self.train_samples + self.test_samples, self.tokenizer)))
+
+        special_symbols = ['<unk>', '<pad>', '<bos>', '<eos>']
         self.vocab = build_vocab_from_iterator(_yield_tokens(self.train_samples, self.tokenizer),
                                                             min_freq = words_min_freq,
                                                             specials = special_symbols,
                                                             special_first = True)
+        # by default returns <unk> index
         self.vocab.set_default_index(0)
+        
 
     def __len__(self) -> int:
         return len(self.train_samples if self.mode == "train" else self.test_samples)
