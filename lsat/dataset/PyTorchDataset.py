@@ -33,7 +33,7 @@ def _load_clip_as_tensors(paths: dict[str, Path]) -> Iterable[Tensor]:
     return (map(lambda frame: frame['data'], VideoReader(str(paths['mp4']), "video")))
 
 
-class LSA_Dataset(Dataset):
+class PyTorchDataset(Dataset):
 
     def __init__(self,
             root: str,
