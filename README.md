@@ -27,6 +27,12 @@ Samples are organized in directories according to the playlists and video they b
     * **roi**: the considered region of interest of the clip (bounding box of the infered signer).
     * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``i_ap.json``.
 
+### Usage
+
+This repository can be installed via ``pip`` and contains the [``LSA_Dataset``](https://github.com/midusi/LSA-T/blob/main/lsat/dataset/LSA_Dataset.py) class (in ``lsat.dataset.LSA_Dataset`` module). This class inherits from the [Pytorch dataset class](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html) and implements all necessary methods for using it with a Pytorch dataloader. It also manages the downloading and extraction of the database.
+
+Also, useful transforms for the clips and keypoints are provided in [``lsat.dataset.transforms``](https://github.com/midusi/LSA-T/blob/main/lsat/dataset/transforms.py)
+
 ### Statistics and comparison with other DBs
 
 |                     | **LSA-T**          | **PHOENIX***     | **SIGNUM**      | **CSL**            | **GSL**     | **KETI**           |
