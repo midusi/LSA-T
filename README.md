@@ -141,4 +141,11 @@ Also, useful transforms for the clips and keypoints are provided in [``lsat.data
 
 ### Citation
 
-**TO-DO**
+```
+@article{bianco2022lsa,
+  title={LSA-T: The first continuous Argentinian Sign Language dataset for Sign Language Translation}, 
+  author={Bianco, Pedro Dal and R{\'\i}os, Gast{\'o}n and Ronchetti, Franco and Quiroga, Facundo and Stanchi, Oscar and Hasperu{\'e}, Waldo and Rosete, Alejandro},
+  journal={arXiv preprint arXiv:2211.15481},
+  year={2022}
+}
+```
