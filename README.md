@@ -2,7 +2,7 @@
 
 LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains 14,880 sentence level videos of LSA extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with labels and keypoints annotations for each signer. Videos are in 30 FPS full HD (1920x1080).
 
-* [Download link](http://163.10.5.88/datasets/lsat.7z) (45GB compressed)
+* [Download link](https://app.seni.ar/datasets/lsat.7z) (45GB compressed)
 * [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
 * Presentation paper (**TO-DO**)
 
