@@ -1,11 +1,13 @@
 # LSA-T: The first continuous LSA dataset
 
-LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains ~22 hs of video extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with spanish subtitles, joints for each signer and the infered signer if there is more than one person in a clip. Videos are in 30 FPS full HD (1920x1080).
+LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains ~22 hs of video extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with spanish subtitles, joints for each signer and the infered signer if there is more than one person in a clip. Videos are in 30 FPS full HD (1920x1080). We've also developed [Seni.ar](https://app.seni.ar), a platform for exploring, validating and augmenting LSA-T.
 
-* [Download labels](https://app.seni.ar/datasets/labels.csv)
-* [Download clips](https://app.seni.ar/datasets/clips.7z)
-* [Download keypoints]()
+* [Explore dataset](https://app.seni.ar/explore)
 * [Presentation paper](https://link.springer.com/chapter/10.1007/978-3-031-22419-5_25)
+* Download
+    * [Download labels](https://app.seni.ar/datasets/labels.csv)
+    * [Download clips](https://app.seni.ar/datasets/clips.7z)
+    * Download keypoints (incoming)
 
 |                                               |                                               |                                               |
 |-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
@@ -71,4 +73,11 @@ Also, useful transforms for the clips and keypoints are provided in [``lsat.data
 
 ## Citation
 
-    Dal Bianco, P., Ríos, G., Ronchetti, F., Quiroga, F., Stanchi, O., Hasperué, W., & Rosete, A. (2022, November). Lsa-t: The first continuous argentinian sign language dataset for sign language translation. In Ibero-American Conference on Artificial Intelligence (pp. 293-304). Cham: Springer International Publishing.
+    @inproceedings{dal2022lsa,
+        title={Lsa-t: The first continuous argentinian sign language dataset for sign language translation},
+        author={Dal Bianco, Pedro and R{\'\i}os, Gast{\'o}n and Ronchetti, Franco and Quiroga, Facundo and Stanchi, Oscar and Hasperu{\'e}, Waldo and Rosete, Alejandro},
+        booktitle={Ibero-American Conference on Artificial Intelligence},
+        pages={293--304},
+        year={2022},
+        organization={Springer}
+    }
