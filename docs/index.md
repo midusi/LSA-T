@@ -9,7 +9,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 
 |                                               |                                               |                                               |
 |-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-| <img width="100%" src="docs/assets/clip2.gif"> | <img width="100%" src="docs/assets/clip3.gif"> | <img width="100%" src="docs/assets/clip1.gif"> |
+| <img width="100%" src="assets/clip2.gif"> | <img width="100%" src="assets/clip3.gif"> | <img width="100%" src=assets/clip1.gif"> |
 
 ## Files and format
 
