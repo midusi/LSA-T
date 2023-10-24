@@ -1,0 +1,1960 @@
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+Processing clip 1/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_110.mp4
+Loaded 521 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_110.mp4: Unable to allocate 52.6 GiB for an array with shape (521, 558, 64748, 3) and data type uint8
+Processing clip 2/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_118.mp4
+Loaded 308 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_118.mp4: could not broadcast input array from shape (0,1920,3) into shape (456,91072,3)
+Processing clip 3/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_119.mp4
+Loaded 222 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_119.mp4: Unable to allocate 108. GiB for an array with shape (222, 13200, 13200, 3) and data type uint8
+Processing clip 4/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_120.mp4
+Loaded 166 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_120.mp4: could not broadcast input array from shape (0,0,3) into shape (555,906,3)
+Processing clip 5/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_124.mp4
+Loaded 165 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_124.mp4: could not broadcast input array from shape (0,578,3) into shape (552,4354,3)
+Processing clip 6/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_126.mp4
+Loaded 541 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/5
+Processing signer 2/5
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_126.mp4: Unable to allocate 62.3 GiB for an array with shape (541, 329, 125280, 3) and data type uint8
+Processing clip 7/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_135.mp4
+Loaded 435 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_135.mp4: Unable to allocate 150. GiB for an array with shape (435, 30815, 3993, 3) and data type uint8
+Processing clip 8/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_27.mp4
+Loaded 266 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_27.mp4: Unable to allocate 44.5 GiB for an array with shape (266, 931, 64304, 3) and data type uint8
+Processing clip 9/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_32.mp4
+Loaded 704 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_32.mp4: Unable to allocate 4.14 TiB for an array with shape (704, 33559, 64235, 3) and data type uint8
+Processing clip 10/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_46.mp4
+Loaded 605 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_46.mp4: could not broadcast input array from shape (477,213,3) into shape (477,29973,3)
+Processing clip 11/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_56.mp4
+Loaded 690 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_56.mp4: Unable to allocate 29.6 TiB for an array with shape (690, 121888, 129152, 3) and data type uint8
+Processing clip 12/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_61.mp4
+Loaded 771 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_61.mp4: Unable to allocate 4.52 TiB for an array with shape (771, 34904, 61502, 3) and data type uint8
+Processing clip 13/2161: agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_65.mp4
+Loaded 244 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip agua-como-tomar-conciencia-sobre-su-cuidado-episodio-3-en-lengua-de-senas-argentina-lsa_65.mp4: Unable to allocate 2.14 TiB for an array with shape (244, 49269, 65315, 3) and data type uint8
+Processing clip 14/2161: cnsordos-se-renueva-noticias-en-lsa-tu-idioma_5.mp4
+Loaded 61 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip cnsordos-se-renueva-noticias-en-lsa-tu-idioma_5.mp4: could not broadcast input array from shape (693,1314,3) into shape (693,12458,3)
+Processing clip 15/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_115.mp4
+Loaded 716 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 16/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_13.mp4
+Loaded 1421 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_13.mp4: could not broadcast input array from shape (1071,1920,3) into shape (1071,2956,3)
+Processing clip 17/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_2.mp4
+Loaded 137 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_2.mp4: could not broadcast input array from shape (978,1817,3) into shape (978,6553,3)
+Processing clip 18/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_23.mp4
+Loaded 298 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_23.mp4: could not broadcast input array from shape (1072,83,3) into shape (1072,2003,3)
+Processing clip 19/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_27.mp4
+Loaded 297 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_27.mp4: could not broadcast input array from shape (600,408,3) into shape (600,64408,3)
+Processing clip 20/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_29.mp4
+Loaded 1676 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_29.mp4: could not broadcast input array from shape (1079,2,3) into shape (1079,1922,3)
+Processing clip 21/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_42.mp4
+Loaded 279 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_42.mp4: could not broadcast input array from shape (632,677,3) into shape (632,49317,3)
+Processing clip 22/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_44.mp4
+Loaded 403 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_44.mp4: Unable to allocate 67.8 GiB for an array with shape (403, 31347, 1920, 3) and data type uint8
+Processing clip 23/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_62.mp4
+Loaded 303 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 24/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_65.mp4
+Loaded 407 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_65.mp4: could not broadcast input array from shape (0,0,3) into shape (632,1518,3)
+Processing clip 25/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_66.mp4
+Loaded 297 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_66.mp4: could not broadcast input array from shape (641,1430,3) into shape (641,5366,3)
+Processing clip 26/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_67.mp4
+Loaded 456 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_67.mp4: Unable to allocate 108. GiB for an array with shape (456, 857, 99136, 3) and data type uint8
+Processing clip 27/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_77.mp4
+Loaded 516 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_77.mp4: Unable to allocate 64.3 GiB for an array with shape (516, 866, 51520, 3) and data type uint8
+Processing clip 28/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_79.mp4
+Loaded 170 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_79.mp4: could not broadcast input array from shape (815,1428,3) into shape (815,59284,3)
+Processing clip 29/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_80.mp4
+Loaded 460 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_80.mp4: could not broadcast input array from shape (821,1920,3) into shape (821,16958,3)
+Processing clip 30/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_82.mp4
+Loaded 306 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 31/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_83.mp4
+Loaded 461 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_83.mp4: Unable to allocate 64.9 GiB for an array with shape (461, 850, 59260, 3) and data type uint8
+Processing clip 32/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_84.mp4
+Loaded 399 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_84.mp4: Unable to allocate 10.3 TiB for an array with shape (399, 89376, 105344, 3) and data type uint8
+Processing clip 33/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_88.mp4
+Loaded 535 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_88.mp4: could not broadcast input array from shape (922,1455,3) into shape (922,23471,3)
+Processing clip 34/2161: como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_94.mp4
+Loaded 311 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-hacer-una-huerta-urbana-en-casa-episodio-8-en-lengua-de-senas-argentina-lsa_94.mp4: could not broadcast input array from shape (613,1410,3) into shape (613,13058,3)
+Processing clip 35/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_130.mp4
+Loaded 317 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_130.mp4: Unable to allocate 60.7 GiB for an array with shape (317, 1072, 63938, 3) and data type uint8
+Processing clip 36/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_133.mp4
+Loaded 276 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_133.mp4: could not broadcast input array from shape (1069,1459,3) into shape (1069,9459,3)
+Processing clip 37/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_146.mp4
+Loaded 138 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_146.mp4: could not broadcast input array from shape (1069,0,3) into shape (1069,1804,3)
+Processing clip 38/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_26.mp4
+Loaded 470 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_26.mp4: Unable to allocate 65.1 GiB for an array with shape (470, 519, 95552, 3) and data type uint8
+Processing clip 39/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_33.mp4
+Loaded 590 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_33.mp4: Unable to allocate 3.53 TiB for an array with shape (590, 33978, 64566, 3) and data type uint8
+Processing clip 40/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_60.mp4
+Loaded 836 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_60.mp4: Unable to allocate 73.2 GiB for an array with shape (836, 485, 64592, 3) and data type uint8
+Processing clip 41/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_62.mp4
+Loaded 557 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_62.mp4: could not broadcast input array from shape (1072,170,3) into shape (1072,2090,3)
+Processing clip 42/2161: como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_74.mp4
+Loaded 163 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-reducir-el-consumo-de-productos-plasticos-episodio-5-en-lengua-de-senas-argentina-lsa_74.mp4: Unable to allocate 899. GiB for an array with shape (163, 30582, 64539, 3) and data type uint8
+Processing clip 43/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_12.mp4
+Loaded 425 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_12.mp4: could not broadcast input array from shape (1080,1920,3) into shape (1080,6656,3)
+Processing clip 44/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_14.mp4
+Loaded 540 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_14.mp4: Unable to allocate 50.1 GiB for an array with shape (540, 1073, 30976, 3) and data type uint8
+Processing clip 45/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_18.mp4
+Loaded 202 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_18.mp4: could not broadcast input array from shape (1075,259,3) into shape (1075,2179,3)
+Processing clip 46/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_2.mp4
+Loaded 135 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_2.mp4: could not broadcast input array from shape (1074,1863,3) into shape (1074,62791,3)
+Processing clip 47/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_32.mp4
+Loaded 339 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 48/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_35.mp4
+Loaded 193 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_35.mp4: could not broadcast input array from shape (354,776,3) into shape (354,64776,3)
+Processing clip 49/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_40.mp4
+Loaded 1229 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_40.mp4: cannot convert float infinity to integer
+Processing clip 50/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_43.mp4
+Loaded 434 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_43.mp4: could not broadcast input array from shape (9,1854,3) into shape (1089,1854,3)
+Processing clip 51/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_5.mp4
+Loaded 400 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 52/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_51.mp4
+Loaded 155 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 53/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_55.mp4
+Loaded 281 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_55.mp4: Unable to allocate 50.2 GiB for an array with shape (281, 1076, 59388, 3) and data type uint8
+Processing clip 54/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_69.mp4
+Loaded 91 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_69.mp4: could not broadcast input array from shape (1073,616,3) into shape (1073,3398,3)
+Processing clip 55/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_72.mp4
+Loaded 804 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_72.mp4: Unable to allocate 33.7 TiB for an array with shape (804, 119648, 128448, 3) and data type uint8
+Processing clip 56/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_74.mp4
+Loaded 290 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_74.mp4: Unable to allocate 130. GiB for an array with shape (290, 1894, 84512, 3) and data type uint8
+Processing clip 57/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_76.mp4
+Loaded 167 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_76.mp4: could not broadcast input array from shape (1074,55,3) into shape (1074,1975,3)
+Processing clip 58/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_8.mp4
+Loaded 527 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_8.mp4: Unable to allocate 46.0 GiB for an array with shape (527, 1077, 29016, 3) and data type uint8
+Processing clip 59/2161: como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_80.mp4
+Loaded 186 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip como-se-hace-el-compost-episodio-6-en-lengua-de-senas-argentina-lsa_80.mp4: could not broadcast input array from shape (1074,1557,3) into shape (1074,23829,3)
+Processing clip 60/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_16.mp4
+Loaded 225 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_16.mp4: could not broadcast input array from shape (1071,111,3) into shape (1071,2031,3)
+Processing clip 61/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_24.mp4
+Loaded 572 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_24.mp4: Unable to allocate 115. GiB for an array with shape (572, 581, 124288, 3) and data type uint8
+Processing clip 62/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_55.mp4
+Loaded 722 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_55.mp4: could not broadcast input array from shape (1071,0,3) into shape (1071,1728,3)
+Processing clip 63/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_61.mp4
+Loaded 206 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_61.mp4: could not broadcast input array from shape (385,592,3) into shape (385,61520,3)
+Processing clip 64/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_62.mp4
+Loaded 227 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 65/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_63.mp4
+Loaded 565 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_63.mp4: Unable to allocate 18.2 TiB for an array with shape (565, 116256, 101440, 3) and data type uint8
+Processing clip 66/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_65.mp4
+Loaded 248 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_65.mp4: could not broadcast input array from shape (567,0,3) into shape (567,762,3)
+Processing clip 67/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_70.mp4
+Loaded 212 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_70.mp4: could not broadcast input array from shape (425,842,3) into shape (425,64842,3)
+Processing clip 68/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_71.mp4
+Loaded 169 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_71.mp4: could not broadcast input array from shape (555,0,3) into shape (555,525,3)
+Processing clip 69/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_72.mp4
+Loaded 150 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_72.mp4: could not broadcast input array from shape (555,0,3) into shape (555,512,3)
+Processing clip 70/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_75.mp4
+Loaded 192 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_75.mp4: could not broadcast input array from shape (0,430,3) into shape (539,28846,3)
+Processing clip 71/2161: guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_86.mp4
+Loaded 239 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip guia-basica-de-consumo-responsable-episodio-2-en-lengua-de-senas-argentina-lsa_86.mp4: could not broadcast input array from shape (1071,1357,3) into shape (1071,3293,3)
+Processing clip 72/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_3.mp4
+Loaded 224 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 73/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_53.mp4
+Loaded 203 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 74/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_54.mp4
+Loaded 128 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_54.mp4: could not broadcast input array from shape (1079,1913,3) into shape (1079,4497,3)
+Processing clip 75/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_55.mp4
+Loaded 241 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 76/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_59.mp4
+Loaded 206 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 77/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_60.mp4
+Loaded 202 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_60.mp4: could not broadcast input array from shape (1078,1911,3) into shape (1078,62839,3)
+Processing clip 78/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_66.mp4
+Loaded 180 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 79/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_77.mp4
+Loaded 430 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_77.mp4: Unable to allocate 208. GiB for an array with shape (430, 35479, 4874, 3) and data type uint8
+Processing clip 80/2161: la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_83.mp4
+Loaded 143 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip la-importancia-del-reciclado-episodio-1-en-lengua-de-senas-argentina-lsa_83.mp4: could not broadcast input array from shape (1076,1836,3) into shape (1076,12716,3)
+Processing clip 81/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_104.mp4
+Loaded 316 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_104.mp4: could not broadcast input array from shape (1080,1920,3) into shape (1080,2164,3)
+Processing clip 82/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_106.mp4
+Loaded 391 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_106.mp4: Unable to allocate 13.7 TiB for an array with shape (391, 101728, 126496, 3) and data type uint8
+Processing clip 83/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_110.mp4
+Loaded 189 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_110.mp4: could not broadcast input array from shape (659,1539,3) into shape (659,65539,3)
+Processing clip 84/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_112.mp4
+Loaded 240 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_112.mp4: could not broadcast input array from shape (611,1442,3) into shape (611,62370,3)
+Processing clip 85/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_121.mp4
+Loaded 497 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_121.mp4: Unable to allocate 123. GiB for an array with shape (497, 755, 116960, 3) and data type uint8
+Processing clip 86/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_35.mp4
+Loaded 390 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_35.mp4: Unable to allocate 5.90 TiB for an array with shape (390, 104128, 53248, 3) and data type uint8
+Processing clip 87/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_37.mp4
+Loaded 1216 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_37.mp4: Unable to allocate 148. GiB for an array with shape (1216, 663, 65500, 3) and data type uint8
+Processing clip 88/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_44.mp4
+Loaded 874 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 89/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_65.mp4
+Loaded 646 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_65.mp4: could not broadcast input array from shape (1078,1285,3) into shape (1078,8773,3)
+Processing clip 90/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_76.mp4
+Loaded 971 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/5
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_76.mp4: could not broadcast input array from shape (1072,1148,3) into shape (1072,9596,3)
+Processing clip 91/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_82.mp4
+Loaded 647 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_82.mp4: Unable to allocate 3.83 TiB for an array with shape (647, 34746, 62421, 3) and data type uint8
+Processing clip 92/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_86.mp4
+Loaded 231 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_86.mp4: could not broadcast input array from shape (678,1494,3) into shape (678,43990,3)
+Processing clip 93/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_90.mp4
+Loaded 103 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_90.mp4: cannot convert float infinity to integer
+Processing clip 94/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_91.mp4
+Loaded 201 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_91.mp4: could not broadcast input array from shape (685,291,3) into shape (685,2211,3)
+Processing clip 95/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_92.mp4
+Loaded 172 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_92.mp4: could not broadcast input array from shape (741,1388,3) into shape (741,46956,3)
+Processing clip 96/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_94.mp4
+Loaded 199 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_94.mp4: could not broadcast input array from shape (732,0,3) into shape (732,1857,3)
+Processing clip 97/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_95.mp4
+Loaded 364 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_95.mp4: could not broadcast input array from shape (744,1755,3) into shape (744,16987,3)
+Processing clip 98/2161: la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_97.mp4
+Loaded 153 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip la-tierra-nuestro-planeta-acciones-para-cuidarlo-episodio-4-en-lengua-de-senas-argentina-lsa_97.mp4: Unable to allocate 54.1 GiB for an array with shape (153, 8038, 15734, 3) and data type uint8
+Processing clip 99/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_100.mp4
+Loaded 309 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_100.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 100/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_103.mp4
+Loaded 81 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_103.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 101/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_104.mp4
+Loaded 136 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_104.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 102/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_105.mp4
+Loaded 94 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_105.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 103/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_106.mp4
+Loaded 123 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_106.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 104/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_107.mp4
+Loaded 158 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_107.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 105/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_108.mp4
+Loaded 260 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_108.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 106/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_110.mp4
+Loaded 227 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_110.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 107/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_111.mp4
+Loaded 202 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_111.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 108/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_113.mp4
+Loaded 124 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_113.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 109/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_114.mp4
+Loaded 56 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_114.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 110/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_115.mp4
+Loaded 119 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_115.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 111/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_116.mp4
+Loaded 113 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_116.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 112/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_117.mp4
+Loaded 676 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_117.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 113/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_120.mp4
+Loaded 138 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_120.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 114/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_13.mp4
+Loaded 111 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_13.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 115/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_14.mp4
+Loaded 84 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_14.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 116/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_15.mp4
+Loaded 149 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_15.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 117/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_16.mp4
+Loaded 80 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_16.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 118/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_17.mp4
+Loaded 114 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_17.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 119/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_18.mp4
+Loaded 140 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_18.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 120/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_19.mp4
+Loaded 348 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_19.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 121/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_21.mp4
+Loaded 191 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_21.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 122/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_23.mp4
+Loaded 60 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_23.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 123/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_24.mp4
+Loaded 85 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_24.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 124/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_25.mp4
+Loaded 141 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_25.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 125/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_26.mp4
+Loaded 218 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_26.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 126/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_28.mp4
+Loaded 218 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_28.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 127/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_3.mp4
+Loaded 166 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_3.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 128/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_30.mp4
+Loaded 204 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_30.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 129/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_32.mp4
+Loaded 247 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_32.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 130/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_34.mp4
+Loaded 187 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_34.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 131/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_36.mp4
+Loaded 118 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_36.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 132/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_37.mp4
+Loaded 182 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_37.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 133/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_38.mp4
+Loaded 194 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_38.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 134/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_39.mp4
+Loaded 86 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_39.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 135/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_4.mp4
+Loaded 693 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_4.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 136/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_40.mp4
+Loaded 119 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_40.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 137/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_41.mp4
+Loaded 110 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_41.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 138/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_42.mp4
+Loaded 179 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_42.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 139/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_44.mp4
+Loaded 200 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_44.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 140/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_46.mp4
+Loaded 235 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_46.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 141/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_48.mp4
+Loaded 158 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_48.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 142/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_49.mp4
+Loaded 212 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_49.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 143/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_51.mp4
+Loaded 270 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_51.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 144/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_53.mp4
+Loaded 98 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_53.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 145/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_54.mp4
+Loaded 128 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_54.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 146/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_55.mp4
+Loaded 200 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_55.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 147/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_57.mp4
+Loaded 151 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_57.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 148/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_59.mp4
+Loaded 240 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_59.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 149/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_61.mp4
+Loaded 137 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_61.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 150/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_62.mp4
+Loaded 83 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_62.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 151/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_63.mp4
+Loaded 201 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_63.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 152/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_65.mp4
+Loaded 144 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_65.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 153/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_66.mp4
+Loaded 218 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_66.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 154/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_67.mp4
+Loaded 193 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_67.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 155/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_68.mp4
+Loaded 276 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_68.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 156/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_69.mp4
+Loaded 101 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_69.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 157/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_70.mp4
+Loaded 199 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_70.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 158/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_71.mp4
+Loaded 149 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_71.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 159/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_72.mp4
+Loaded 83 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_72.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 160/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_73.mp4
+Loaded 123 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_73.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 161/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_74.mp4
+Loaded 201 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_74.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 162/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_76.mp4
+Loaded 125 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_76.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 163/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_77.mp4
+Loaded 170 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_77.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 164/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_79.mp4
+Loaded 250 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_79.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 165/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_8.mp4
+Loaded 883 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_8.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 166/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_81.mp4
+Loaded 387 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_81.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 167/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_82.mp4
+Loaded 218 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_82.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 168/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_84.mp4
+Loaded 142 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_84.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 169/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_85.mp4
+Loaded 130 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_85.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 170/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_86.mp4
+Loaded 103 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_86.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 171/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_87.mp4
+Loaded 108 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_87.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 172/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_88.mp4
+Loaded 146 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_88.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 173/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_89.mp4
+Loaded 533 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_89.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 174/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_93.mp4
+Loaded 184 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_93.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 175/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_95.mp4
+Loaded 83 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_95.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 176/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_96.mp4
+Loaded 183 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_96.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 177/2161: leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_98.mp4
+Loaded 315 frames
+Tracking people in video
+Getting bounding boxes for each person
+Failed to process clip leyfederalsa-resumen-de-la-mesa-de-trabajo-region-patagonia_98.mp4: OpenCV(4.8.0) /io/opencv/modules/video/src/lkpyramid.cpp:1394: error: (-215:Assertion failed) prevPyr[level * lvlStep1].size() == nextPyr[level * lvlStep2].size() in function 'calc'
+
+Processing clip 178/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_126.mp4
+Loaded 77 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_126.mp4: could not broadcast input array from shape (1069,1383,3) into shape (1069,43879,3)
+Processing clip 179/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_133.mp4
+Loaded 276 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 180/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_134.mp4
+Loaded 462 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_134.mp4: Unable to allocate 180. GiB for an array with shape (462, 1080, 128896, 3) and data type uint8
+Processing clip 181/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_138.mp4
+Loaded 264 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 182/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_203.mp4
+Loaded 336 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 183/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_232.mp4
+Loaded 153 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 184/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_243.mp4
+Loaded 182 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_243.mp4: could not broadcast input array from shape (1065,0,3) into shape (1065,1570,3)
+Processing clip 185/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_252.mp4
+Loaded 156 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_252.mp4: could not broadcast input array from shape (1065,1920,3) into shape (1065,5312,3)
+Processing clip 186/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_260.mp4
+Loaded 175 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_260.mp4: could not broadcast input array from shape (35,1920,3) into shape (1115,1920,3)
+Processing clip 187/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_282.mp4
+Loaded 54 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_282.mp4: Unable to allocate 61.0 GiB for an array with shape (54, 18144, 22266, 3) and data type uint8
+Processing clip 188/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_285.mp4
+Loaded 142 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_285.mp4: could not broadcast input array from shape (981,0,3) into shape (14037,1060,3)
+Processing clip 189/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_286.mp4
+Loaded 183 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 190/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_287.mp4
+Loaded 244 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 191/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_289.mp4
+Loaded 61 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_289.mp4: Unable to allocate 167. GiB for an array with shape (61, 44096, 22272, 3) and data type uint8
+Processing clip 192/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_290.mp4
+Loaded 148 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_290.mp4: could not broadcast input array from shape (921,110,3) into shape (921,2030,3)
+Processing clip 193/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_294.mp4
+Loaded 269 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_294.mp4: could not broadcast input array from shape (1067,1920,3) into shape (1067,47488,3)
+Processing clip 194/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_295.mp4
+Loaded 224 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_295.mp4: could not broadcast input array from shape (1006,1920,3) into shape (1006,5664,3)
+Processing clip 195/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_296.mp4
+Loaded 253 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 196/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_298.mp4
+Loaded 150 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_298.mp4: could not broadcast input array from shape (1068,904,3) into shape (1068,2824,3)
+Processing clip 197/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_299.mp4
+Loaded 57 frames
+Tracking people in video
+Getting bounding boxes for each person
+WARNING: not enough matching points
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_299.mp4: could not broadcast input array from shape (0,0,3) into shape (1079,1478,3)
+Processing clip 198/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_300.mp4
+Loaded 218 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_300.mp4: Unable to allocate 42.9 GiB for an array with shape (218, 1069, 65918, 3) and data type uint8
+Processing clip 199/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_301.mp4
+Loaded 157 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_301.mp4: could not broadcast input array from shape (1061,414,3) into shape (1061,2334,3)
+Processing clip 200/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_305.mp4
+Loaded 79 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_305.mp4: could not broadcast input array from shape (42,1920,3) into shape (4586,15676,3)
+Processing clip 201/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_306.mp4
+Loaded 268 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_306.mp4: could not broadcast input array from shape (1066,1920,3) into shape (1066,5088,3)
+Processing clip 202/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_309.mp4
+Loaded 223 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 203/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_310.mp4
+Loaded 137 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_310.mp4: could not broadcast input array from shape (1072,111,3) into shape (1072,2031,3)
+Processing clip 204/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_312.mp4
+Loaded 447 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_312.mp4: could not broadcast input array from shape (13,0,3) into shape (1093,1918,3)
+Processing clip 205/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_325.mp4
+Loaded 248 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 206/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_339.mp4
+Loaded 168 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 207/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_34.mp4
+Loaded 164 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_34.mp4: could not broadcast input array from shape (0,0,3) into shape (844,1891,3)
+Processing clip 208/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_344.mp4
+Loaded 306 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_344.mp4: could not broadcast input array from shape (811,0,3) into shape (811,1205,3)
+Processing clip 209/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_35.mp4
+Loaded 389 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_35.mp4: could not broadcast input array from shape (1079,1596,3) into shape (1079,31292,3)
+Processing clip 210/2161: lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_55.mp4
+Loaded 378 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-programa-especial-20062021_55.mp4: could not broadcast input array from shape (1072,1561,3) into shape (1072,31257,3)
+Processing clip 211/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_118.mp4
+Loaded 738 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/5
+Processing signer 2/5
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_118.mp4: Unable to allocate 4.37 TiB for an array with shape (738, 33652, 64465, 3) and data type uint8
+Processing clip 212/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_122.mp4
+Loaded 348 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Processing signer 3/4
+Processing signer 4/4
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_122.mp4: Unable to allocate 1.05 TiB for an array with shape (348, 49966, 22196, 3) and data type uint8
+Processing clip 213/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_22.mp4
+Loaded 604 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 214/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_25.mp4
+Loaded 726 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_25.mp4: Unable to allocate 62.2 GiB for an array with shape (726, 497, 61651, 3) and data type uint8
+Processing clip 215/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_29.mp4
+Loaded 449 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_29.mp4: Unable to allocate 6.43 TiB for an array with shape (449, 90912, 57751, 3) and data type uint8
+Processing clip 216/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_34.mp4
+Loaded 437 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_34.mp4: Unable to allocate 17.1 TiB for an array with shape (437, 111136, 129152, 3) and data type uint8
+Processing clip 217/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_49.mp4
+Loaded 961 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_49.mp4: Unable to allocate 149. GiB for an array with shape (961, 498, 111296, 3) and data type uint8
+Processing clip 218/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_51.mp4
+Loaded 1050 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_51.mp4: Unable to allocate 5.99 TiB for an array with shape (1050, 36740, 56928, 3) and data type uint8
+Processing clip 219/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-03102021_8.mp4
+Loaded 142 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 220/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_10.mp4
+Loaded 77 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_10.mp4: could not broadcast input array from shape (1067,135,3) into shape (1067,16935,3)
+Processing clip 221/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_100.mp4
+Loaded 182 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_100.mp4: could not broadcast input array from shape (497,0,3) into shape (497,990,3)
+Processing clip 222/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_101.mp4
+Loaded 231 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 223/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_103.mp4
+Loaded 275 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_103.mp4: could not broadcast input array from shape (505,683,3) into shape (505,43179,3)
+Processing clip 224/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_108.mp4
+Loaded 375 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_108.mp4: Unable to allocate 602. GiB for an array with shape (375, 9091, 63232, 3) and data type uint8
+Processing clip 225/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_11.mp4
+Loaded 588 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_11.mp4: Unable to allocate 3.50 TiB for an array with shape (588, 33655, 64784, 3) and data type uint8
+Processing clip 226/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_115.mp4
+Loaded 276 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_115.mp4: could not broadcast input array from shape (499,655,3) into shape (499,52367,3)
+Processing clip 227/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_118.mp4
+Loaded 223 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_118.mp4: could not broadcast input array from shape (499,789,3) into shape (499,64789,3)
+Processing clip 228/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_122.mp4
+Loaded 155 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 229/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_125.mp4
+Loaded 139 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_125.mp4: could not broadcast input array from shape (0,760,3) into shape (925,52472,3)
+Processing clip 230/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_126.mp4
+Loaded 201 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_126.mp4: could not broadcast input array from shape (496,0,3) into shape (496,1289,3)
+Processing clip 231/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_127.mp4
+Loaded 234 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 232/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_130.mp4
+Loaded 163 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_130.mp4: could not broadcast input array from shape (496,757,3) into shape (496,5877,3)
+Processing clip 233/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_131.mp4
+Loaded 168 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_131.mp4: could not broadcast input array from shape (0,0,3) into shape (527,787,3)
+Processing clip 234/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_18.mp4
+Loaded 843 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_18.mp4: Unable to allocate 35.6 TiB for an array with shape (843, 124416, 124384, 3) and data type uint8
+Processing clip 235/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_22.mp4
+Loaded 1812 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_22.mp4: Unable to allocate 84.2 TiB for an array with shape (1812, 130848, 130208, 3) and data type uint8
+Processing clip 236/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_29.mp4
+Loaded 498 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_29.mp4: could not broadcast input array from shape (503,497,3) into shape (503,3281,3)
+Processing clip 237/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_37.mp4
+Loaded 266 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_37.mp4: could not broadcast input array from shape (485,799,3) into shape (485,61727,3)
+Processing clip 238/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_42.mp4
+Loaded 404 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_42.mp4: Unable to allocate 14.5 TiB for an array with shape (404, 122560, 107584, 3) and data type uint8
+Processing clip 239/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_60.mp4
+Loaded 1402 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_60.mp4: could not broadcast input array from shape (501,784,3) into shape (501,6864,3)
+Processing clip 240/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_76.mp4
+Loaded 814 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_76.mp4: Unable to allocate 55.8 GiB for an array with shape (814, 498, 49281, 3) and data type uint8
+Processing clip 241/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_79.mp4
+Loaded 975 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_79.mp4: could not broadcast input array from shape (494,0,3) into shape (494,727,3)
+Processing clip 242/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_85.mp4
+Loaded 453 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_85.mp4: Unable to allocate 16.5 TiB for an array with shape (453, 115008, 116384, 3) and data type uint8
+Processing clip 243/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_97.mp4
+Loaded 639 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-05092021_97.mp4: Unable to allocate 27.6 TiB for an array with shape (639, 125440, 126144, 3) and data type uint8
+Processing clip 244/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_101.mp4
+Loaded 379 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_101.mp4: Unable to allocate 48.6 GiB for an array with shape (379, 1075, 42694, 3) and data type uint8
+Processing clip 245/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_105.mp4
+Loaded 396 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_105.mp4: could not broadcast input array from shape (551,755,3) into shape (551,37107,3)
+Processing clip 246/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_107.mp4
+Loaded 439 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_107.mp4: Unable to allocate 2.93 TiB for an array with shape (439, 50368, 48504, 3) and data type uint8
+Processing clip 247/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_12.mp4
+Loaded 618 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_12.mp4: Unable to allocate 961. GiB for an array with shape (618, 24860, 22397, 3) and data type uint8
+Processing clip 248/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_122.mp4
+Loaded 808 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_122.mp4: Unable to allocate 34.5 TiB for an array with shape (808, 125184, 125088, 3) and data type uint8
+Processing clip 249/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_125.mp4
+Loaded 545 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_125.mp4: Unable to allocate 23.2 TiB for an array with shape (545, 120800, 129184, 3) and data type uint8
+Processing clip 250/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_130.mp4
+Loaded 268 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_130.mp4: could not broadcast input array from shape (1068,0,3) into shape (1068,1800,3)
+Processing clip 251/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_134.mp4
+Loaded 227 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_134.mp4: could not broadcast input array from shape (453,271,3) into shape (453,61199,3)
+Processing clip 252/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_137.mp4
+Loaded 343 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_137.mp4: could not broadcast input array from shape (1024,1229,3) into shape (31296,1229,3)
+Processing clip 253/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_147.mp4
+Loaded 457 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_147.mp4: Unable to allocate 52.4 GiB for an array with shape (457, 34752, 1182, 3) and data type uint8
+Processing clip 254/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_160.mp4
+Loaded 245 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 255/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_164.mp4
+Loaded 713 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_164.mp4: could not broadcast input array from shape (551,467,3) into shape (551,25555,3)
+Processing clip 256/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_172.mp4
+Loaded 445 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_172.mp4: could not broadcast input array from shape (547,758,3) into shape (547,40182,3)
+Processing clip 257/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_179.mp4
+Loaded 334 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_179.mp4: could not broadcast input array from shape (1073,0,3) into shape (1073,1917,3)
+Processing clip 258/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_182.mp4
+Loaded 195 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 259/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_20.mp4
+Loaded 333 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 260/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_220.mp4
+Loaded 173 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 261/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_24.mp4
+Loaded 229 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 262/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_25.mp4
+Loaded 910 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 263/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_283.mp4
+Loaded 330 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 264/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_287.mp4
+Loaded 1157 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_287.mp4: Unable to allocate 66.6 GiB for an array with shape (1157, 749, 27513, 3) and data type uint8
+Processing clip 265/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_33.mp4
+Loaded 537 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_33.mp4: Unable to allocate 84.2 GiB for an array with shape (537, 31348, 1791, 3) and data type uint8
+Processing clip 266/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_368.mp4
+Loaded 348 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_368.mp4: could not broadcast input array from shape (547,0,3) into shape (547,650,3)
+Processing clip 267/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_38.mp4
+Loaded 164 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_38.mp4: could not broadcast input array from shape (41,0,3) into shape (1121,1498,3)
+Processing clip 268/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_48.mp4
+Loaded 838 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_48.mp4: Unable to allocate 78.3 GiB for an array with shape (838, 31349, 1067, 3) and data type uint8
+Processing clip 269/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_52.mp4
+Loaded 823 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_52.mp4: could not broadcast input array from shape (546,0,3) into shape (30818,332,3)
+Processing clip 270/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_56.mp4
+Loaded 705 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_56.mp4: cannot convert float infinity to integer
+Processing clip 271/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_68.mp4
+Loaded 739 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_68.mp4: Unable to allocate 40.5 GiB for an array with shape (739, 30833, 636, 3) and data type uint8
+Processing clip 272/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_71.mp4
+Loaded 446 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_71.mp4: Unable to allocate 1.04 TiB for an array with shape (446, 15224, 56176, 3) and data type uint8
+Processing clip 273/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_74.mp4
+Loaded 429 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_74.mp4: could not broadcast input array from shape (513,595,3) into shape (513,3635,3)
+Processing clip 274/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_94.mp4
+Loaded 163 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_94.mp4: could not broadcast input array from shape (547,0,3) into shape (547,762,3)
+Processing clip 275/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_95.mp4
+Loaded 802 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 276/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_97.mp4
+Loaded 494 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_97.mp4: Unable to allocate 82.9 GiB for an array with shape (494, 553, 108640, 3) and data type uint8
+Processing clip 277/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_99.mp4
+Loaded 333 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-07062021_99.mp4: could not broadcast input array from shape (0,549,3) into shape (597,56133,3)
+Processing clip 278/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_10.mp4
+Loaded 376 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 279/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_100.mp4
+Loaded 667 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_100.mp4: Unable to allocate 828. GiB for an array with shape (667, 8043, 55218, 3) and data type uint8
+Processing clip 280/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_115.mp4
+Loaded 499 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_115.mp4: could not broadcast input array from shape (390,1920,3) into shape (390,61178,3)
+Processing clip 281/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_118.mp4
+Loaded 745 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_118.mp4: could not broadcast input array from shape (393,0,3) into shape (393,455,3)
+Processing clip 282/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_126.mp4
+Loaded 450 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 283/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_128.mp4
+Loaded 561 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_128.mp4: Unable to allocate 449. GiB for an array with shape (561, 30041, 9540, 3) and data type uint8
+Processing clip 284/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_70.mp4
+Loaded 517 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_70.mp4: could not broadcast input array from shape (1072,0,3) into shape (1072,1824,3)
+Processing clip 285/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_71.mp4
+Loaded 660 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_71.mp4: Unable to allocate 1.92 TiB for an array with shape (660, 34964, 30549, 3) and data type uint8
+Processing clip 286/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_87.mp4
+Loaded 484 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_87.mp4: could not broadcast input array from shape (1080,946,3) into shape (22272,946,3)
+Processing clip 287/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_9.mp4
+Loaded 185 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Processing clip 288/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_90.mp4
+Loaded 743 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_90.mp4: Unable to allocate 47.2 GiB for an array with shape (743, 389, 58456, 3) and data type uint8
+Processing clip 289/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-10102021_98.mp4
+Loaded 444 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 290/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_103.mp4
+Loaded 192 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 291/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_108.mp4
+Loaded 336 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_108.mp4: could not broadcast input array from shape (1070,0,3) into shape (1070,1909,3)
+Processing clip 292/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_116.mp4
+Loaded 346 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_116.mp4: Unable to allocate 328. GiB for an array with shape (346, 22272, 15224, 3) and data type uint8
+Processing clip 293/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_118.mp4
+Loaded 896 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/7
+Processing signer 2/7
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_118.mp4: Unable to allocate 35.7 TiB for an array with shape (896, 125152, 116672, 3) and data type uint8
+Processing clip 294/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_122.mp4
+Loaded 325 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_122.mp4: Unable to allocate 2.10 TiB for an array with shape (325, 22272, 106240, 3) and data type uint8
+Processing clip 295/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_125.mp4
+Loaded 264 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 296/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_131.mp4
+Loaded 280 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_131.mp4: Unable to allocate 1006. GiB for an array with shape (280, 30604, 42035, 3) and data type uint8
+Processing clip 297/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_132.mp4
+Loaded 271 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 298/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_134.mp4
+Loaded 205 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/4
+Processing signer 2/4
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_134.mp4: could not broadcast input array from shape (528,0,3) into shape (528,789,3)
+Processing clip 299/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_14.mp4
+Loaded 830 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_14.mp4: Unable to allocate 37.1 TiB for an array with shape (830, 125888, 130240, 3) and data type uint8
+Processing clip 300/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_149.mp4
+Loaded 315 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/1
+Processing clip 301/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_154.mp4
+Loaded 541 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_154.mp4: Unable to allocate 98.8 GiB for an array with shape (541, 34600, 1889, 3) and data type uint8
+Processing clip 302/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_156.mp4
+Loaded 1044 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_156.mp4: Unable to allocate 3.10 TiB for an array with shape (1044, 34928, 31111, 3) and data type uint8
+Processing clip 303/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_159.mp4
+Loaded 413 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_159.mp4: could not broadcast input array from shape (1080,0,3) into shape (20470,805,3)
+Processing clip 304/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_166.mp4
+Loaded 240 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
+Processing signer 3/3
+Processing clip 305/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_167.mp4
+Loaded 363 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_167.mp4: Unable to allocate 61.1 GiB for an array with shape (363, 531, 113408, 3) and data type uint8
+Processing clip 306/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_169.mp4
+Loaded 175 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/2
+Processing signer 2/2
+Failed to process clip lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_169.mp4: could not broadcast input array from shape (0,781,3) into shape (569,49421,3)
+Processing clip 307/2161: lsa-noticias-en-lengua-de-senas-argentina-resumen-semanal-11072021_171.mp4
+Loaded 856 frames
+Tracking people in video
+Getting bounding boxes for each person
+Processing signer 1/3
+Processing signer 2/3
