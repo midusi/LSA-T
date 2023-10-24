@@ -1,33 +1,46 @@
-## LSA-T: The first continuous LSA dataset
+# LSA-T: The first continuous LSA dataset
 
-LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains 14,880 sentence level videos of LSA extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with labels and keypoints annotations for each signer. Videos are in 30 FPS full HD (1920x1080).
+LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contains ~22 hs of video extracted from the [CN Sordos YouTube channel](https://www.youtube.com/c/CNSORDOSARGENTINA) with spanish subtitles, joints for each signer and the infered signer if there is more than one person in a clip. Videos are in 30 FPS full HD (1920x1080).
 
-* [Download link](https://app.seni.ar/datasets/lsat.7z) (45GB compressed)
-* [Visualization notebook](https://colab.research.google.com/drive/1kj5ztYw_57fi6wo2dpL18UkBR9ciV6ki)
-* [Presentation paper](https://arxiv.org/pdf/2211.15481.pdf) (preprint PDF)
+* [Download labels](https://app.seni.ar/datasets/labels.csv)
+* [Download clips](https://app.seni.ar/datasets/clips.7z)
+* [Download keypoints]()
+* [Presentation paper](https://link.springer.com/chapter/10.1007/978-3-031-22419-5_25)
 
 |                                               |                                               |                                               |
 |-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
-| <img width="100%" src="assets/clip2.gif"> | <img width="100%" src="assets/clip3.gif"> | <img width="100%" src="assets/clip1.gif"> |
+| <img width="100%" src="docs/assets/clip2.gif"> | <img width="100%" src="docs/assets/clip3.gif"> | <img width="100%" src="docs/assets/clip1.gif"> |
 
-### Format
+## Files and format
 
-Samples are organized in directories according to the playlists and video they belong to. For each sample ```i``` there are four files:
+### [labels.csv](https://app.seni.ar/datasets/labels.csv)
 
-* ``i.mp4``: the clip corresponding to the ith line of subtitles.
-* ``i.json`` contains:
-    * **label**: the line of subtitles corresponding to the clip.
-    * **start**: time in seconds where the subtitle starts.
-    * **end**: time in seconds where the subtitle ends.
-    * **video**: title of the video which the clip belongs to.
-    * **playlist**: title of the playlist which the clip belongs to.
-* ``i_ap.json``: the raw AlphaPose results over the clip using [Halpe KeyPoints](https://github.com/Fang-Haoshu/Halpe-FullBody) in [AlphaPose default output format](https://github.com/MVIG-SJTU/AlphaPose/blob/master/docs/output.md).
-* ``i_signer.json`` contains:
-    * **scores**: for each person in the clip, the amount of "movement" in its hands. It is used to infer who is the signer.
-    * **roi**: the considered region of interest of the clip (bounding box of the infered signer).
-    * **keypoints**: list of keypoints for each frame of the infered signer in same format that in ``i_ap.json``.
+This file contains labels and extra metadata for the 8459 clips. It contains the following columns:
 
-### Statistics and comparison with other DBs
+* ``id``: id of the clip. It's used as the name of the mp4 file and the key for its keypoints.
+* ``label``: the spanish translation of the clip.
+* ``video``: title of the video which the clip belongs to.
+* ``playlist``: title of the playlist which the clip belongs to.
+* ``start``: time in seconds where the clip starts (respect to the video).
+* ``end``: time in seconds where the clip ends (respect to the video).
+* ``duration``: duration of the clip in seconds.
+* ``splits``: clips are cropped according to sentences. Sentences might be split into many pieces of subtitles, so data of this splits is kept as a list of tuples containing (``piece_of_subtitle``, ``start``, ``end``). ``start`` and ``end`` are stored as time in seconds respect to the whole video.
+* ``prev_delta``: as sometimes cropping clips according to the subtitles timestamp resulted in cropping signs, a time delta was added. By default is of 0.5 secs, unless there is another clip that ends nearer the video, in that case, the distance of the ending time of the previous clip and current clip's starting time it's used as delta.
+* ``post_delta``: same as ``prev_delta`` but at the end of each clip.
+* ``signers_amount``: amount of people (potential signers) present in the clip (detected by YOLOv8).
+* ``infered_signer``: id of the person infered to be the signer (used to identify it's keypoints in the keypoints file).
+* ``infered_signer_confidence``: confidence of the semi automatic signer inference (from 0 to 1).
+* ``movement_per_signer``: amount of movement computed for each signer.
+
+### [clips.7z](https://app.seni.ar/datasets/clips.7z)
+
+Contains the clips in mp4, full HD 30 FPS. Their name matches their id in the ``labels.csv`` file.
+
+### [joints.h5]()
+
+Contains the joints for each person in each clip and their bounding boxes. The hdf5 dataset contains a group for each clip (accesed by the clip's id) and then a group for each signer (ids as signer_i).
+
+## Statistics and comparison with other DBs (original paper version)
 
 |                     | **LSA-T**          | **PHOENIX***     | **SIGNUM**      | **CSL**            | **GSL**     | **KETI**           |
 |-------------------------|--------------------|------------------|-----------------|--------------------|-------------|--------------------|
@@ -48,98 +61,14 @@ Samples are organized in directories according to the playlists and video they b
 | **resolution**          | **1920x1080**      | 210x260          | 776x578         | **1920x1080**      | 848x480     | **1920x1080**      |
 | **fps**                 | **30**             | 25               | **30**          | **30**             | **30**      | **30**             |
 
-\*Data was not available for the whole PHOENIX dataset, so the table show its train set statistics.
+## Usage 
 
-### Evaluation splits
+**Deprecated, working in a new version of the loader**
 
-<table>
-    <tr>
-        <td></td>
-        <td><b>LSA-T</b></td>
-        <td colspan=2><b>Full version</b></td>
-        <td colspan=2><b>Reduced version</b></td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>Train</td>
-        <td>Test</td>
-        <td>Train</td>
-        <td>Test</td>
-    </tr>
-    <tr>
-        <td><b>signers</b></td>
-        <td>103</td>
-        <td>X</td>
-        <td>X</td>
-        <td>X</td>
-        <td>X</td>
-    </tr>
-    <tr>
-        <td><b>duration [h]</b></td>
-        <td>21.78</td>
-        <td>17.49</td>
-        <td>4.29</td>
-        <td>15.85</td>
-        <td>3.89</td>
-    </tr>
-    <tr>
-        <td><b># sentences</b></td>
-        <td>14,880</td>
-        <td>11,065</td>
-        <td>2735</td>
-        <td>3767</td>
-        <td>910</td>
-    </tr>
-    <tr>
-        <td><b>% unique sentences</b></td>
-        <td>95.79%</td>
-        <td>96.64%</td>
-        <td>92.78%</td>
-        <td>96.88%</td>
-        <td>98.35%</td>
-    </tr>
-    <tr>
-        <td><b>vocab. size</b></td>
-        <td>14,239</td>
-        <td>12,385</td>
-        <td>5546</td>
-        <td>2694</td>
-        <td>1579</td>
-    </tr>
-    <tr>
-        <td><b>% singletons</b></td>
-        <td>50.21%</td>
-        <td>52.01%</td>
-        <td>61.9%</td>
-        <td>23.2%</td>
-        <td>48.83%</td>
-    </tr>
-    <tr>
-        <td><b>% sentences with singletons</b></td>
-        <td>34.97%</td>
-        <td>40.98%</td>
-        <td>67.97%</td>
-        <td>14.36%</td>
-        <td>54.29%</td>
-    </tr>
-    <tr>
-        <td><b>% sentences with words not in train vocabulary</b></td>
-        <td>-</td>
-        <td>-</td>
-        <td>59.2%</td>
-        <td>-</td>
-        <td>84.5%</td>
-    </tr>
-</table>
+This repository can be installed via ``pip`` and contains the [``LSA_Dataset``](https://github.com/midusi/LSA-T/blob/main/lsat/dataset/LSA_Dataset.py) class (in ``lsat.dataset.LSA_Dataset`` module). This class inherits from the [Pytorch dataset class](https://pytorch.org/tutorials/beginner/basics/data_tutorial.html) and implements all necessary methods for using it with a Pytorch dataloader. It also manages the downloading and extraction of the database.
 
-### Citation
+Also, useful transforms for the clips and keypoints are provided in [``lsat.dataset.transforms``](https://github.com/midusi/LSA-T/blob/main/lsat/dataset/transforms.py)
 
-```
-@article{bianco2022lsa,
-  title={LSA-T: The first continuous Argentinian Sign Language dataset for Sign Language Translation}, 
-  author={Bianco, Pedro Dal and R{\'\i}os, Gast{\'o}n and Ronchetti, Franco and Quiroga, Facundo and Stanchi, Oscar and Hasperu{\'e}, Waldo and Rosete, Alejandro},
-  journal={arXiv preprint arXiv:2211.15481},
-  year={2022}
-}
-```
+## Citation
+
+    Dal Bianco, P., Ríos, G., Ronchetti, F., Quiroga, F., Stanchi, O., Hasperué, W., & Rosete, A. (2022, November). Lsa-t: The first continuous argentinian sign language dataset for sign language translation. In Ibero-American Conference on Artificial Intelligence (pp. 293-304). Cham: Springer International Publishing.
