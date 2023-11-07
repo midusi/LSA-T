@@ -13,3 +13,4 @@ __pycache__
 .mypy_cache
 lsat.egg-info
 dist
+nohup.out

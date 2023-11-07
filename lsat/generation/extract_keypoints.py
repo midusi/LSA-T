@@ -7,6 +7,7 @@ import numpy as np
 from numpy.typing import NDArray
 from ultralytics import YOLO
 from mediapipe import solutions
+import torch
 
 from helpers import load_video
 
@@ -24,6 +25,7 @@ def process_keys(frame_keypoints, box: NDArray[JOINTS_SIZE]) -> NDArray[JOINTS_S
 
 def run_holistic(frames: NDArray[np.uint8], box: NDArray[JOINTS_SIZE]) -> NDArray[JOINTS_SIZE]:
 	keypoints = np.empty((len(frames), 33*4+468*4+21*4+21*4), dtype=JOINTS_SIZE)
+	keypoints.fill(np.nan)
 	with solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic: # type: ignore
 		for i_frame, frame in enumerate(frames):
 			keypoints[i_frame] = process_keys(holistic.process(cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)), box)
@@ -79,6 +81,9 @@ def main():
 
 	model = YOLO("yolov8n-pose.pt")
 
+	np.random.seed(0)
+	torch.manual_seed(0)
+
 	for i_person, clip in list(enumerate(clips)):
 		print(f"Processing clip {i_person+1}/{len(clips)}: {clip}")
 		try:
@@ -96,7 +101,13 @@ def main():
 			last_boxes: list[NDArray[JOINTS_SIZE]] = []
 			for i_frame, frame in enumerate(results):
 				# boxes are in format x1, y1, x2, y2
+
 				people_frame_boxes = [np.array(box)[:4] for box in frame.boxes.data.tolist()]
+				# check if any value of the boxes is larger than 3000, if so print the box
+				if any([any([coord > 3000 for coord in box]) for box in people_frame_boxes]):
+					print(f"Box larger than 3000 in frame {i_frame+1} of clip {clip}")
+					print(people_frame_boxes)
+
 				# append box to boxes in the index where the last box shares the most area with the current box, if no box shares more than 50% of area, append to the end
 				for i_person, frame_box in enumerate(people_frame_boxes):
 					shared_areas = [get_shared_area(frame_box, last_person_box) for last_person_box in last_boxes]
@@ -105,7 +116,9 @@ def main():
 						people_frame_level_boxes[shared_areas.index(max_shared_area)][i_frame] = people_frame_boxes[i_person]
 						last_boxes[shared_areas.index(max_shared_area)] = people_frame_boxes[i_person]
 					else:
-						people_frame_level_boxes.append(np.empty((frame_count, 4), dtype=JOINTS_SIZE))
+						new_box = np.empty((frame_count, 4), dtype=JOINTS_SIZE)
+						new_box.fill(np.nan)
+						people_frame_level_boxes.append(new_box)
 						people_frame_level_boxes[-1][i_frame] = people_frame_boxes[i_person]
 						last_boxes.append(people_frame_boxes[i_person])
 
@@ -119,6 +132,7 @@ def main():
 			for i_person, person_box in enumerate(clip_level_boxes):
 				print(f"Processing signer {i_person+1}/{len(clip_level_boxes)}")
 				signer_video = np.empty((len(video), coord_to_pixel(person_box[3])-coord_to_pixel(person_box[1]), coord_to_pixel(person_box[2])-coord_to_pixel(person_box[0]), 3), dtype=np.uint8)
+				signer_video.fill(0)
 				for i_frame, (frame, roi) in enumerate(zip(video, people_frame_level_boxes[i_person])):
 					signer_video[i_frame] = crop_person(person_box, blackout_box(roi, frame))
 				signer_keypoints = run_holistic(signer_video, person_box)
