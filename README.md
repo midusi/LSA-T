@@ -7,7 +7,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 * Download
     * [Download labels](https://app.seni.ar/datasets/labels.csv)
     * [Download clips](https://app.seni.ar/datasets/clips.7z)
-    * Download keypoints (incoming)
+    * [Download keypoints](https://app.seni.ar/api/download/keypoints.h5)
 
 |                                               |                                               |                                               |
 |-----------------------------------------------|-----------------------------------------------|-----------------------------------------------|
@@ -38,9 +38,11 @@ This file contains labels and extra metadata for the 8459 clips. It contains the
 
 Contains the clips in mp4, full HD 30 FPS. Their name matches their id in the ``labels.csv`` file.
 
-### [joints.h5]()
+### [joints.h5](https://app.seni.ar/api/download/keypoints.h5)
 
 Contains the joints for each person in each clip and their bounding boxes. The hdf5 dataset contains a group for each clip (accesed by the clip's id) and then a group for each signer (ids as signer_i).
+
+Each keypoint is represented as x,y,z,confidence.
 
 ## Statistics and comparison with other DBs (original paper version)
 
