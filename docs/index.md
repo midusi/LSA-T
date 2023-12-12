@@ -5,7 +5,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 * [Explore dataset](https://app.seni.ar/explore)
 * [Presentation paper](https://link.springer.com/chapter/10.1007/978-3-031-22419-5_25)
 * Download
-    * [Download labels](https://app.seni.ar/datasets/labels.csv)
+    * [Download labels and metadata](https://app.seni.ar/api/download/meta.csv)
     * [Download clips](https://app.seni.ar/datasets/clips.7z)
     * [Download keypoints](https://app.seni.ar/api/download/keypoints.h5)
 
@@ -15,7 +15,7 @@ LSA-T is the first continuous Argentinian Sign Language (LSA) dataset. It contai
 
 ## Files and format
 
-### [labels.csv](https://app.seni.ar/datasets/labels.csv)
+### [meta.csv](https://app.seni.ar/api/download/meta.csv)
 
 This file contains labels and extra metadata for the 8459 clips. It contains the following columns:
 
